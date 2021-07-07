@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1625660207939
+Build-Jdk-Spec: 11
+Bundle-Activator: org.cytoscape.CytoCopasi.CyActivator
+Bundle-ClassPath: .,org.COPASI-1.jar
+Bundle-ManifestVersion: 2
+Bundle-Name: CytoCopasi
+Bundle-SymbolicName: org.cytoscape.CytoCopasi
+Bundle-Version: 1
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: org.COPASI;scope=!provided
+Embed-Transitive: true
+Embedded-Artifacts: org.COPASI-1.jar;g="org.COPASI";a="org.COPASI";v="1"
+Import-Package: org.cytoscape.application;resolution:=optional;version="
+ [3.7,4)",org.cytoscape.application.swing;resolution:=optional;version="
+ [3.7,4)",org.cytoscape.event;resolution:=optional;version="[3.7,4)",org
+ .cytoscape.model;resolution:=optional;version="[3.7,4)",org.cytoscape.s
+ ervice.util;resolution:=optional;version="[3.7,4)",org.cytoscape.sessio
+ n;resolution:=optional;version="[3.7,4)",org.cytoscape.view.model;resol
+ ution:=optional;version="[3.7,4)",org.cytoscape.view.vizmap;resolution:
+ =optional;version="[3.7,4)",org.cytoscape.work;resolution:=optional;ver
+ sion="[3.7,4)",org.cytoscape.work.swing;resolution:=optional;version="[
+ 3.7,4)",org.osgi.framework;resolution:=optional;version="[1.8,2)",org.s
+ lf4j;resolution:=optional;version="[1.5,2)"
+Main-Class: org.cytoscape.CytoCopasi.Example1.Example1
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-5.1.1.202006162103

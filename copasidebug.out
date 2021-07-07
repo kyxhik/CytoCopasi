@@ -1,0 +1,1689 @@
+Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T20:41:47+02:00)
+Maven home: /home/people/hkaya/Downloads/apache-maven-3.6.0
+Java version: 11.0.9, vendor: Red Hat, Inc., runtime: /usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.10.0-693.17.1.el7.x86_64", arch: "amd64", family: "unix"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.util.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from /home/people/hkaya/Downloads/apache-maven-3.6.0/conf/settings.xml
+[DEBUG] Reading user settings from /home/people/hkaya/.m2/settings.xml
+[DEBUG] Reading global toolchains from /home/people/hkaya/Downloads/apache-maven-3.6.0/conf/toolchains.xml
+[DEBUG] Reading user toolchains from /home/people/hkaya/.m2/toolchains.xml
+[DEBUG] Using local repository at /home/people/hkaya/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/people/hkaya/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=946281, ConflictMarker.markTime=328787, ConflictMarker.nodeCount=218, ConflictIdSorter.graphTime=572461, ConflictIdSorter.topsortTime=4620552, ConflictIdSorter.conflictIdCount=74, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=10140322, ConflictResolver.conflictItemCount=161, DefaultDependencyCollector.collectTime=835959286, DefaultDependencyCollector.transformTime=18117044}
+[DEBUG] org.apache.felix:maven-bundle-plugin:jar:5.1.1:
+[DEBUG]    org.osgi:org.osgi.core:jar:6.0.0:compile
+[DEBUG]    biz.aQute.bnd:biz.aQute.bndlib:jar:5.1.1:compile
+[DEBUG]    org.slf4j:slf4j-api:jar:1.7.25:compile
+[DEBUG]    org.apache.felix:org.apache.felix.bundlerepository:jar:1.6.6:compile
+[DEBUG]       org.easymock:easymock:jar:2.4:compile
+[DEBUG]    org.apache.felix:org.apache.felix.utils:jar:1.6.0:compile
+[DEBUG]       org.osgi:org.osgi.compendium:jar:4.2.0:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.3.9:compile
+[DEBUG]          org.apache.maven:maven-builder-support:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-api:jar:3.3.9:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.3.9:compile
+[DEBUG]          com.google.guava:guava:jar:18.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.3.9:compile
+[DEBUG]          org.eclipse.aether:aether-spi:jar:1.0.2.v20150114:compile
+[DEBUG]       org.eclipse.aether:aether-impl:jar:1.0.2.v20150114:compile
+[DEBUG]       org.eclipse.aether:aether-api:jar:1.0.2.v20150114:compile
+[DEBUG]       org.eclipse.aether:aether-util:jar:1.0.2.v20150114:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.2:compile
+[DEBUG]          javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]             javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.2:compile
+[DEBUG]       com.google.inject:guice:jar:no_aop:4.0:compile
+[DEBUG]          javax.inject:javax.inject:jar:1:compile
+[DEBUG]          aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.21:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.5.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.6:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.4:compile
+[DEBUG]    org.apache.maven:maven-compat:jar:3.3.9:compile
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:2.10:compile
+[DEBUG]    org.apache.maven.reporting:maven-reporting-api:jar:3.0:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:3.5.0:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile
+[DEBUG]       commons-io:commons-io:jar:2.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-archiver:jar:4.2.0:compile
+[DEBUG]          org.codehaus.plexus:plexus-io:jar:3.2.0:compile
+[DEBUG]          org.apache.commons:commons-compress:jar:1.19:compile
+[DEBUG]          org.iq80.snappy:snappy:jar:0.4:compile
+[DEBUG]          org.tukaani:xz:jar:1.8:runtime
+[DEBUG]    org.apache.maven.shared:maven-dependency-tree:jar:3.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.3.0:compile
+[DEBUG]    org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    org.apache.maven.doxia:doxia-sink-api:jar:1.0:compile
+[DEBUG]    org.apache.maven.doxia:doxia-site-renderer:jar:1.0:compile
+[DEBUG]       org.apache.maven.doxia:doxia-core:jar:1.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-i18n:jar:1.0-beta-7:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-30:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-velocity:jar:1.1.7:compile
+[DEBUG]       org.apache.velocity:velocity:jar:1.5:compile
+[DEBUG]          commons-lang:commons-lang:jar:2.1:compile
+[DEBUG]          oro:oro:jar:2.0.8:compile
+[DEBUG]       org.apache.maven.doxia:doxia-decoration-model:jar:1.0:compile
+[DEBUG]       commons-collections:commons-collections:jar:3.2:compile
+[DEBUG]       org.apache.maven.doxia:doxia-module-apt:jar:1.0:compile
+[DEBUG]       org.apache.maven.doxia:doxia-module-fml:jar:1.0:compile
+[DEBUG]       org.apache.maven.doxia:doxia-module-xdoc:jar:1.0:compile
+[DEBUG]       org.apache.maven.doxia:doxia-module-xhtml:jar:1.0:compile
+[DEBUG]    org.jdom:jdom:jar:1.1:compile
+[DEBUG] Created new class realm extension>org.apache.felix:maven-bundle-plugin:5.1.1
+[DEBUG] Importing foreign packages into class realm extension>org.apache.felix:maven-bundle-plugin:5.1.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm extension>org.apache.felix:maven-bundle-plugin:5.1.1
+[DEBUG]   Included: org.apache.felix:maven-bundle-plugin:jar:5.1.1
+[DEBUG]   Included: org.osgi:org.osgi.core:jar:6.0.0
+[DEBUG]   Included: biz.aQute.bnd:biz.aQute.bndlib:jar:5.1.1
+[DEBUG]   Included: org.apache.felix:org.apache.felix.bundlerepository:jar:1.6.6
+[DEBUG]   Included: org.easymock:easymock:jar:2.4
+[DEBUG]   Included: org.apache.felix:org.apache.felix.utils:jar:1.6.0
+[DEBUG]   Included: org.osgi:org.osgi.compendium:jar:4.2.0
+[DEBUG]   Included: org.apache.maven:maven-builder-support:jar:3.3.9
+[DEBUG]   Included: com.google.guava:guava:jar:18.0
+[DEBUG]   Included: org.eclipse.aether:aether-util:jar:1.0.2.v20150114
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.2
+[DEBUG]   Included: com.google.inject:guice:jar:no_aop:4.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.21
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.6
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.4
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:3.0
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:3.5.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.2.1
+[DEBUG]   Included: commons-io:commons-io:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:4.2.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:3.2.0
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.19
+[DEBUG]   Included: org.iq80.snappy:snappy:jar:0.4
+[DEBUG]   Included: org.tukaani:xz:jar:1.8
+[DEBUG]   Included: org.apache.maven.shared:maven-dependency-tree:jar:3.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.3.0
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-site-renderer:jar:1.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-core:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-i18n:jar:1.0-beta-7
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-velocity:jar:1.1.7
+[DEBUG]   Included: org.apache.velocity:velocity:jar:1.5
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.1
+[DEBUG]   Included: oro:oro:jar:2.0.8
+[DEBUG]   Included: org.apache.maven.doxia:doxia-decoration-model:jar:1.0
+[DEBUG]   Included: commons-collections:commons-collections:jar:3.2
+[DEBUG]   Included: org.apache.maven.doxia:doxia-module-apt:jar:1.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-module-fml:jar:1.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-module-xdoc:jar:1.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-module-xhtml:jar:1.0
+[DEBUG]   Included: org.jdom:jdom:jar:1.1
+[DEBUG] Extension realms for project org.cytoscape.CytoCopasi:CytoCopasi:bundle:1: [ClassRealm[extension>org.apache.felix:maven-bundle-plugin:5.1.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]]
+[DEBUG] Created new class realm project>org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Populating class realm project>org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Looking up lifecycle mappings for packaging bundle from ClassRealm[project>org.cytoscape.CytoCopasi:CytoCopasi:1, parent: ClassRealm[maven.api, parent: null]]
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.cytoscape.CytoCopasi:CytoCopasi:bundle:1
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.osgi:org.osgi.core:jar -> version 6.0.0 vs ${osgi.api.version} @ line 204, column 15
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.felix:maven-bundle-plugin @ line 119, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: org.cytoscape.CytoCopasi:CytoCopasi:bundle:1
+[DEBUG] Tasks:   [package]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] ----------------< org.cytoscape.CytoCopasi:CytoCopasi >-----------------
+[INFO] Building CytoCopasi 1
+[INFO] -------------------------------[ bundle ]-------------------------------
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-resources-plugin/maven-metadata.xml in local (/home/people/hkaya/.m2/repository)
+[DEBUG] Skipped remote request for org.apache.maven.plugins:maven-resources-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-resources-plugin to 3.2.0 from repository central (https://repo.maven.apache.org/maven2, default, releases)
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-surefire-plugin/maven-metadata.xml in local (/home/people/hkaya/.m2/repository)
+[DEBUG] Skipped remote request for org.apache.maven.plugins:maven-surefire-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-surefire-plugin to 3.0.0-M5 from repository central (https://repo.maven.apache.org/maven2, default, releases)
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-deploy-plugin/maven-metadata.xml in local (/home/people/hkaya/.m2/repository)
+[DEBUG] Skipped remote request for org.apache.maven.plugins:maven-deploy-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-deploy-plugin to 3.0.0-M1 from repository central (https://repo.maven.apache.org/maven2, default, releases)
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, test]
+[DEBUG] Repositories (dependencies): [cytoscape_snapshots (http://code.cytoscape.org/nexus/content/repositories/snapshots/, default, snapshots), cytoscape_releases (http://code.cytoscape.org/nexus/content/repositories/releases/, default, releases), lib (file:///${project.parent.basedir}/lib, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file (default)
+[DEBUG] Style:         Aggregating
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifactId>org.COPASI</artifactId>
+  <classifier>${classifier}</classifier>
+  <createChecksum default-value="false">${createChecksum}</createChecksum>
+  <file>src/lib/copasi.jar</file>
+  <generatePom>${generatePom}</generatePom>
+  <groupId>org.COPASI</groupId>
+  <javadoc>${javadoc}</javadoc>
+  <localRepository>${localRepository}</localRepository>
+  <localRepositoryPath>${localRepositoryPath}</localRepositoryPath>
+  <packaging>jar</packaging>
+  <pomFile>${pomFile}</pomFile>
+  <repositoryLayout default-value="default">${repositoryLayout}</repositoryLayout>
+  <sources>${sources}</sources>
+  <updateReleaseInfo default-value="false">${updateReleaseInfo}</updateReleaseInfo>
+  <version>1</version>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.2.0:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.0:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerArguments>
+    <Xmaxwarns>10000</Xmaxwarns>
+    <Xmaxerrs>10000</Xmaxerrs>
+  </compilerArguments>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">true</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <showDeprecation default-value="false">true</showDeprecation>
+  <showWarnings default-value="false">true</showWarnings>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">7</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">7</target>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.2.0:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.0:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerArguments>
+    <Xmaxwarns>10000</Xmaxwarns>
+    <Xmaxerrs>10000</Xmaxerrs>
+  </compilerArguments>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">true</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <showDeprecation default-value="false">true</showDeprecation>
+  <showWarnings default-value="false">true</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">7</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">7</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <additionalClasspathElements>${maven.test.additionalClasspath}</additionalClasspathElements>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <classpathDependencyExcludes>${maven.test.dependency.excludes}</classpathDependencyExcludes>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <dependenciesToScan>${dependenciesToScan}</dependenciesToScan>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <enableProcessChecker>${surefire.enableProcessChecker}</enableProcessChecker>
+  <encoding default-value="${project.reporting.outputEncoding}">${surefire.encoding}</encoding>
+  <excludedEnvironmentVariables>${surefire.excludedEnvironmentVariables}</excludedEnvironmentVariables>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <excludesFile>${surefire.excludesFile}</excludesFile>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkCount default-value="1">${forkCount}</forkCount>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkNode>${surefire.forkNode}</forkNode>
+  <forkedProcessExitTimeoutInSeconds default-value="30">${surefire.exitTimeout}</forkedProcessExitTimeoutInSeconds>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <includesFile>${surefire.includesFile}</includesFile>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <parallelOptimized default-value="true">${parallelOptimized}</parallelOptimized>
+  <parallelTestsTimeoutForcedInSeconds>${surefire.parallel.forcedTimeout}</parallelTestsTimeoutForcedInSeconds>
+  <parallelTestsTimeoutInSeconds>${surefire.parallel.timeout}</parallelTestsTimeoutInSeconds>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <project default-value="${project}"/>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <projectBuildDirectory default-value="${project.build.directory}"/>
+  <projectRemoteRepositories default-value="${project.remoteArtifactRepositories}"/>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <rerunFailingTestsCount default-value="0">${surefire.rerunFailingTestsCount}</rerunFailingTestsCount>
+  <reuseForks default-value="true">${reuseForks}</reuseForks>
+  <runOrder default-value="filesystem">${surefire.runOrder}</runOrder>
+  <session default-value="${session}"/>
+  <shutdown default-value="exit">${surefire.shutdown}</shutdown>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipAfterFailureCount default-value="0">${surefire.skipAfterFailureCount}</skipAfterFailureCount>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <suiteXmlFiles>${surefire.suiteXmlFiles}</suiteXmlFiles>
+  <systemPropertiesFile>${surefire.systemPropertiesFile}</systemPropertiesFile>
+  <tempDir default-value="surefire">${tempDir}</tempDir>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <threadCountClasses default-value="0">${threadCountClasses}</threadCountClasses>
+  <threadCountMethods default-value="0">${threadCountMethods}</threadCountMethods>
+  <threadCountSuites default-value="0">${threadCountSuites}</threadCountSuites>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useModulePath default-value="true">${surefire.useModulePath}</useModulePath>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.felix:maven-bundle-plugin:5.1.1:bundle (default-bundle)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <dependencyReducedPomLocation default-value="${basedir}/dependency-reduced-pom.xml"/>
+  <dumpClasspath>${dumpClasspath}</dumpClasspath>
+  <dumpInstructions>${dumpInstructions}</dumpInstructions>
+  <excludeDependencies>${excludeDependencies}</excludeDependencies>
+  <finalName default-value="${project.build.finalName}"/>
+  <instructions>
+    <Bundle-SymbolicName>org.cytoscape.CytoCopasi</Bundle-SymbolicName>
+    <Bundle-Version>1</Bundle-Version>
+    <Export-Package>!org.cytoscape.CytoCopasi.*</Export-Package>
+    <Private-Package>org.cytoscape.CytoCopasi.*</Private-Package>
+    <Bundle-Activator>org.cytoscape.CytoCopasi.CyActivator</Bundle-Activator>
+    <Embed-Dependency>slf4j-api;scope=compile,
+		                log4j;scope=compile</Embed-Dependency>
+  </instructions>
+  <localRepository default-value="${localRepository}"/>
+  <m_mavenSession default-value="${session}"/>
+  <manifestLocation default-value="${project.build.outputDirectory}/META-INF">${manifestLocation}</manifestLocation>
+  <niceManifest default-value="false">${niceManifest}</niceManifest>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <project default-value="${project}"/>
+  <remoteArtifactRepositories default-value="${project.remoteArtifactRepositories}"/>
+  <scrLocation default-value="${project.build.outputDirectory}"/>
+  <session default-value="${session}"/>
+  <unpackBundle>${unpackBundle}</unpackBundle>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=411046, ConflictMarker.markTime=202685, ConflictMarker.nodeCount=165, ConflictIdSorter.graphTime=187871, ConflictIdSorter.topsortTime=41805, ConflictIdSorter.conflictIdCount=52, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2084396, ConflictResolver.conflictItemCount=164, DefaultDependencyCollector.collectTime=308260150, DefaultDependencyCollector.transformTime=2940880}
+[DEBUG] org.cytoscape.CytoCopasi:CytoCopasi:bundle:1
+[DEBUG]    org.cytoscape:work-api:jar:3.7.2:compile
+[DEBUG]    org.osgi:org.osgi.core:jar:6.0.0:provided
+[DEBUG]    org.cytoscape:service-api:jar:3.7.2:compile
+[DEBUG]    org.cytoscape:model-api:jar:3.7.2:compile
+[DEBUG]       org.cytoscape:event-api:jar:3.7.2:compile
+[DEBUG]    org.cytoscape:viewmodel-api:jar:3.7.2:compile
+[DEBUG]    org.cytoscape:session-api:jar:3.7.2:compile
+[DEBUG]       org.cytoscape:vizmap-api:jar:3.7.2:compile
+[DEBUG]       org.cytoscape:property-api:jar:3.7.2:compile
+[DEBUG]    org.cytoscape:swing-application-api:jar:3.7.2:compile
+[DEBUG]       org.cytoscape:work-swing-api:jar:3.7.2:compile
+[DEBUG]       org.cytoscape:application-api:jar:3.7.2:compile
+[DEBUG]          org.cytoscape:presentation-api:jar:3.7.2:compile
+[DEBUG]       org.cytoscape:swing-util-api:jar:3.7.2:compile
+[DEBUG]          org.cytoscape:util-api:jar:3.7.2:compile
+[DEBUG]    com.googlecode.json-simple:json-simple:jar:1.1.1:compile (optional)
+[DEBUG]       junit:junit:jar:4.10:compile (optional)
+[DEBUG]          org.hamcrest:hamcrest-core:jar:1.1:compile (optional)
+[DEBUG]    org.ops4j.pax.logging:pax-logging-api:jar:1.5.2:provided
+[DEBUG]    javax.xml.bind:jaxb-api:jar:2.3.0:compile
+[DEBUG]    com.sun.xml.bind:jaxb-core:jar:2.3.0:compile
+[DEBUG]    com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile
+[DEBUG]    org.COPASI:org.COPASI:jar:1:compile
+[DEBUG]    org.openscience.cdk:cdk-qsarmolecular:jar:2.2:compile (optional)
+[DEBUG]       gov.nist.math:jama:jar:1.0.3:compile (optional)
+[DEBUG]       javax.vecmath:vecmath:jar:1.5.2:compile (optional)
+[DEBUG]       xom:xom:jar:1.2.5:compile (optional)
+[DEBUG]          xml-apis:xml-apis:jar:1.3.03:compile (optional)
+[DEBUG]          xerces:xercesImpl:jar:2.8.0:compile (optional)
+[DEBUG]          xalan:xalan:jar:2.7.0:compile (optional)
+[DEBUG]       com.google.guava:guava:jar:17.0:compile (optional)
+[DEBUG]       uk.ac.ebi.beam:beam-core:jar:1.2:compile (optional)
+[DEBUG]       uk.ac.ebi.beam:beam-func:jar:1.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-interfaces:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-core:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-standard:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-atomtype:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-valencycheck:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-reaction:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-charges:jar:2.2:compile (optional)
+[DEBUG]          org.openscience.cdk:cdk-io:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-qsar:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-smiles:jar:2.2:compile (optional)
+[DEBUG]          org.openscience.cdk:cdk-ioformats:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-smarts:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-formula:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-isomorphism:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-dict:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-fragment:jar:2.2:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-fingerprint:jar:2.2:compile (optional)
+[DEBUG]          org.apache.commons:commons-math3:jar:3.1.1:compile (optional)
+[DEBUG]       org.openscience.cdk:cdk-hash:jar:2.2:compile (optional)
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install-file (default) @ CytoCopasi ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=170691, ConflictMarker.markTime=63098, ConflictMarker.nodeCount=40, ConflictIdSorter.graphTime=79082, ConflictIdSorter.topsortTime=17116, ConflictIdSorter.conflictIdCount=19, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=460389, ConflictResolver.conflictItemCount=40, DefaultDependencyCollector.collectTime=98418220, DefaultDependencyCollector.transformTime=807615}
+[DEBUG] org.apache.maven.plugins:maven-install-plugin:jar:2.5.2:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.11:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-artifact-manager:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.2.1:compile
+[DEBUG]       backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.2.1:compile
+[DEBUG]    commons-codec:commons-codec:jar:1.6:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:0.4:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.15:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.5.2
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.5.2
+[DEBUG]   Imported:  < project>org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.5.2
+[DEBUG]   Included: org.apache.maven.plugins:maven-install-plugin:jar:2.5.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.11
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.6
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.4
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.15
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-install-plugin:2.5.2, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file' with basic configurator -->
+[DEBUG]   (f) artifactId = org.COPASI
+[DEBUG]   (f) createChecksum = false
+[DEBUG]   (f) file = /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/copasi.jar
+[DEBUG]   (f) groupId = org.COPASI
+[DEBUG]   (f) localRepository =       id: local
+      url: file:///home/people/hkaya/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[DEBUG]   (f) packaging = jar
+[DEBUG]   (f) repositoryLayout = default
+[DEBUG]   (f) updateReleaseInfo = false
+[DEBUG]   (f) version = 1
+[DEBUG] -- end configuration --
+[INFO] pom.xml not found in copasi.jar
+[DEBUG] Skipping installation of generated POM, already present in local repository
+[INFO] Installing /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/copasi.jar to /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar
+[DEBUG] Skipped re-installing /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/copasi.jar to /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar, seems unchanged
+[DEBUG] Writing tracking file /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/_remote.repositories
+[DEBUG] Installing org.COPASI:org.COPASI/maven-metadata.xml to /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/maven-metadata-local.xml
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ CytoCopasi ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=125198, ConflictMarker.markTime=41622, ConflictMarker.nodeCount=86, ConflictIdSorter.graphTime=68499, ConflictIdSorter.topsortTime=27396, ConflictIdSorter.conflictIdCount=35, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=792275, ConflictResolver.conflictItemCount=85, DefaultDependencyCollector.collectTime=247433510, DefaultDependencyCollector.transformTime=1073631}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:3.2.0:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.1.0:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.1.0:compile
+[DEBUG]          org.eclipse.aether:aether-spi:jar:0.9.0.M2:compile
+[DEBUG]       org.eclipse.aether:aether-impl:jar:0.9.0.M2:compile
+[DEBUG]       org.eclipse.aether:aether-api:jar:0.9.0.M2:compile
+[DEBUG]       org.eclipse.aether:aether-util:jar:0.9.0.M2:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:3.0.10:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.4.2:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.1.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-component-annotations:jar:2.0.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.26:runtime
+[DEBUG]    org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M2a:compile
+[DEBUG]       javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]          javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]          javax.inject:javax.inject:jar:1:compile
+[DEBUG]       com.google.guava:guava:jar:10.0.1:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[DEBUG]       org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:compile
+[DEBUG]          aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M2a:compile
+[DEBUG]          asm:asm:jar:3.3.1:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:3.2.0:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.3.3:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    commons-io:commons-io:jar:2.6:compile
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.8.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.2.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.2.0
+[DEBUG]   Imported:  < project>org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.2.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:3.2.0
+[DEBUG]   Included: org.eclipse.aether:aether-util:jar:0.9.0.M2
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.10
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:2.0.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: com.google.guava:guava:jar:10.0.1
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:1.3.9
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M2a
+[DEBUG]   Included: asm:asm:jar:3.3.1
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:3.2.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.3.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: commons-io:commons-io:jar:2.6
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.8.1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:3.2.0:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.2.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:3.2.0:resources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: org.cytoscape.CytoCopasi:CytoCopasi:1 @ /home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/main/resources, PatternSet [includes: {}, excludes: {}]}}, Resource {targetPath: null, filtering: false, FileSet {directory: /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {env.TERM=xterm-256color, java.specification.version=11, sun.cpu.isalist=, sun.arch.data.model=64, java.vendor.url=https://www.redhat.com/, env.MODULESHOME=/usr/share/Modules, sun.boot.library.path=/usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64/lib, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X package, jdk.debug=release, maven.version=3.6.0, maven-compiler-plugin.version=3.8.0, env.BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+}, java.specification.vendor=Oracle Corporation, java.version.date=2020-10-20, java.home=/usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64, env.SCHRODINGER=/opt/schrodinger2017-1, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, env.SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.9+11-LTS, env.CURRIP=10.10.11.117, env.PATH=/home/people/hkaya/Downloads/apache-maven-3.6.0/bin:/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin:/opt/scru_applications/charmm/bin:/opt/maui/bin:/opt/torque/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/scratch/hkaya/vmd/vmd-1.9.3/bin, env.LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:, env.XDG_SEAT=seat0, file.encoding=UTF-8, java.vendor.version=18.9, env.HOSTNAME=workstation3.cem-uct.ac.za, env.HISTCONTROL=ignoredups, env.XDG_SESSION_DESKTOP=gnome, env.SHLVL=3, project.baseUri=file:/home/people/hkaya/git/cytoscape-api/CytoCopasi/, java.io.tmpdir=/tmp, java.version=11.0.9, env.CONDA_PYTHON_EXE=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin/python, java.vm.specification.name=Java Virtual Machine Specification, cytoscape.api.version=3.8.2, java.awt.printerjob=sun.print.PSPrinterJob, java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, bundle.namespace=org.cytoscape.CytoCopasi, env.WINDOWPATH=1, java.vendor=Red Hat, Inc., classworlds.conf=/home/people/hkaya/Downloads/apache-maven-3.6.0/bin/m2.conf, sun.io.unicode.encoding=UnicodeLittle, env.XAUTHORITY=/run/gdm/auth-for-hkaya@cem-uct.ac.za-nVljDa/database, sun.desktop=gnome, maven-bundle-plugin.version=5.1.1, env.SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2054,unix/unix:/tmp/.ICE-unix/2054, env.LANG=en_US.UTF-8, env.QTINC=/usr/lib64/qt-3.3/include, env.CONDA_SHLVL=1, env.FFIELD=/home/people/hkaya/FFIELD, env.XDG_DATA_DIRS=/home/people/hkaya/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/, user.timezone=, os.name=Linux, java.vm.specification.version=11, junit.version=4.12, env.DISPLAY=:0, env.KDEDIRS=/usr, env.WORKSTATION_GROUP=silicon platinum osmium iridium thallium polonium boron carbon nitrogen tungsten neon magnesium sodium tellurium antimony phosphorous sulphur potassium chlorine argon oxygen calcium cobalt workstation1 workstation2 workstation3 workstation4 vislab03 iodine, user.home=/home/people/hkaya, env.DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-JY0XE1MZJ9,guid=60b085c59e09ec6f7663e3f760dad640, maven.build.timestamp=2021-06-29T12:17:56Z, env.COLORTERM=truecolor, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, env.DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-JY0XE1MZJ9,guid=60b085c59e09ec6f7663e3f760dad640, path.separator=:, os.version=3.10.0-693.17.1.el7.x86_64, env.MODULEPATH=/home/people/profile/bash/modules:/home/people/profile/bash/modules:/usr/share/Modules/modulefiles:/etc/modulefiles, env.MAIL=/var/spool/mail/hkaya@cem-uct.ac.za, env.IMSETTINGS_INTEGRATE_DESKTOP=yes, java.vm.name=OpenJDK 64-Bit Server VM, env.SHELL=/bin/bash, env.HISTSIZE=1000, env.VTE_VERSION=4602, env.USERNAME=hkaya, os.arch=amd64, maven.multiModuleProjectDirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.DESKTOP_SESSION=gnome, env.MAVEN_PROJECTBASEDIR=/home/people/hkaya/git/cytoscape-api/CytoCopasi, java.vm.info=mixed mode, sharing, env._LMFILES_=/home/people/profile/bash/modules/scru:/home/people/profile/bash/modules/queue:/home/people/profile/bash/modules/charmm/charmm.cluster:/home/people/profile/bash/modules/schrodinger/2017-1, env.USER=hkaya, java.class.version=55.0, awt.toolkit=sun.awt.X11.XToolkit, sun.jnu.encoding=UTF-8, env.LM_LICENSE_FILE=27008@schrodinger, env._CE_CONDA=, maven.build.version=Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T20:41:47+02:00), maven.home=/home/people/hkaya/Downloads/apache-maven-3.6.0, osgi.api.version=6.0.0, bundle.symbolicName=org.cytoscape.CytoCopasi, env.GDMSESSION=gnome, env.CONDA_PREFIX=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, env.GDM_LANG=en_US.UTF-8, env.SCHRODINGER_TMPDIR=/scratch/hkaya, env.QT_QPA_PLATFORMTHEME=qgnomeplatform, env.WINDOWID=37754406, user.name=hkaya@cem-uct.ac.za, env.LOGNAME=hkaya, env.DBUS_STARTER_BUS_TYPE=session, env.XDG_VTNR=1, env.CONDA_DEFAULT_ENV=base, env.SSH_AUTH_SOCK=/run/user/106800026/keyring/ssh, env.QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins, env.XDG_RUNTIME_DIR=/run/user/106800026, env.XMODIFIERS=@im=none, sun.os.patch.level=unknown, env.TMPDIR=/scratch/hkaya, env.XDG_SESSION_TYPE=x11, library.jansi.path=/home/people/hkaya/Downloads/apache-maven-3.6.0/lib/jansi-native, env.OLDPWD=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.PWD=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.LESSOPEN=||/usr/bin/lesspipe.sh %s, java.class.path=/home/people/hkaya/Downloads/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar, env.HOME=/home/people/hkaya, env.QT_IM_MODULE=xim, java.vm.vendor=Red Hat, Inc., maven.conf=/home/people/hkaya/Downloads/apache-maven-3.6.0/conf, sun.java.launcher=SUN_STANDARD, user.country=US, sun.cpu.endian=little, env.QT_GRAPHICSSYSTEM_CHECKED=1, user.language=en, env.CONDA_EXE=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin/conda, env.IMSETTINGS_MODULE=none, env.PROFILE=/home/people/hkaya/../profiles, env.LOADEDMODULES=scru:queue:charmm/charmm.cluster:schrodinger/2017-1, maven-surefire-plugin.version=3.0.0-M5, env.XDG_MENU_PREFIX=gnome-, java.runtime.name=OpenJDK Runtime Environment, env.XDG_SESSION_ID=1, env.QTDIR=/usr/lib64/qt-3.3, env.CONDA_PROMPT_MODIFIER=(base) , env.QTLIB=/usr/lib64/qt-3.3/lib, env.MAVEN_CMD_LINE_ARGS= -X package, java.vendor.url.bug=https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%207&component=java-11-openjdk, user.dir=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.XDG_CURRENT_DESKTOP=GNOME, java.vm.version=11.0.9+11-LTS, env._CE_M=, env.KRB5CCNAME=KEYRING:persistent:106800026}
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Using 'null' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource
+[DEBUG] resource with targetPath null
+directory /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 11 resources
+[DEBUG] Copying file libCopasiJava.so
+[DEBUG] file libCopasiJava.so has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'libCopasiJava.so'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/libCopasiJava.so to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/libCopasiJava.so
+[DEBUG] Copying file copasi.jar
+[DEBUG] file copasi.jar has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'copasi.jar'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/copasi.jar to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/copasi.jar
+[DEBUG] Copying file org/COPASI/org.COPASI/maven-metadata.xml
+[DEBUG] file maven-metadata.xml has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'maven-metadata.xml'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/maven-metadata.xml to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/maven-metadata.xml
+[DEBUG] Copying file org/COPASI/org.COPASI/maven-metadata.xml.sha1
+[DEBUG] file maven-metadata.xml.sha1 has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'maven-metadata.xml.sha1'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/maven-metadata.xml.sha1 to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/maven-metadata.xml.sha1
+[DEBUG] Copying file org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1
+[DEBUG] file org.COPASI-1.jar.sha1 has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'org.COPASI-1.jar.sha1'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1 to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1
+[DEBUG] Copying file org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5
+[DEBUG] file org.COPASI-1.pom.md5 has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'org.COPASI-1.pom.md5'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5 to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5
+[DEBUG] Copying file org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1
+[DEBUG] file org.COPASI-1.pom.sha1 has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'org.COPASI-1.pom.sha1'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1 to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1
+[DEBUG] Copying file org/COPASI/org.COPASI/1/org.COPASI-1.jar
+[DEBUG] file org.COPASI-1.jar has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'org.COPASI-1.jar'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/1/org.COPASI-1.jar
+[DEBUG] Copying file org/COPASI/org.COPASI/1/org.COPASI-1.pom
+[DEBUG] file org.COPASI-1.pom has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'org.COPASI-1.pom'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/1/org.COPASI-1.pom
+[DEBUG] Copying file org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5
+[DEBUG] file org.COPASI-1.jar.md5 has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'org.COPASI-1.jar.md5'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5 to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5
+[DEBUG] Copying file org/COPASI/org.COPASI/maven-metadata.xml.md5
+[DEBUG] file maven-metadata.xml.md5 has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'maven-metadata.xml.md5'.
+[DEBUG] copy /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/maven-metadata.xml.md5 to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/COPASI/org.COPASI/maven-metadata.xml.md5
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ CytoCopasi ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=300635, ConflictMarker.markTime=106154, ConflictMarker.nodeCount=160, ConflictIdSorter.graphTime=76622, ConflictIdSorter.topsortTime=59851, ConflictIdSorter.conflictIdCount=43, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=885326, ConflictResolver.conflictItemCount=63, DefaultDependencyCollector.collectTime=225571578, DefaultDependencyCollector.transformTime=1453386}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.0:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.5.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:0.1:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.0:runtime
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.5.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.2:compile
+[DEBUG]       org.apache.xbean:xbean-reflect:jar:3.4:compile
+[DEBUG]          log4j:log4j:jar:1.2.12:compile
+[DEBUG]          commons-logging:commons-logging-api:jar:1.1:compile
+[DEBUG]       com.google.collections:google-collections:jar:1.0:compile
+[DEBUG]       junit:junit:jar:3.8.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.0
+[DEBUG]   Imported:  < project>org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.1
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.0
+[DEBUG]   Included: org.apache.xbean:xbean-reflect:jar:3.4
+[DEBUG]   Included: log4j:log4j:jar:1.2.12
+[DEBUG]   Included: commons-logging:commons-logging-api:jar:1.1
+[DEBUG]   Included: com.google.collections:google-collections:jar:1.0
+[DEBUG]   Included: junit:junit:jar:3.8.2
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.0:compile' with basic configurator -->
+[DEBUG]   (f) basedir = /home/people/hkaya/git/cytoscape-api/CytoCopasi
+[DEBUG]   (f) buildDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target
+[DEBUG]   (f) classpathElements = [/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes, /home/people/hkaya/.m2/repository/org/cytoscape/work-api/3.7.2/work-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar, /home/people/hkaya/.m2/repository/org/cytoscape/service-api/3.7.2/service-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/model-api/3.7.2/model-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/event-api/3.7.2/event-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/viewmodel-api/3.7.2/viewmodel-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/session-api/3.7.2/session-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/vizmap-api/3.7.2/vizmap-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/property-api/3.7.2/property-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/swing-application-api/3.7.2/swing-application-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/work-swing-api/3.7.2/work-swing-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/application-api/3.7.2/application-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/presentation-api/3.7.2/presentation-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/swing-util-api/3.7.2/swing-util-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/util-api/3.7.2/util-api-3.7.2.jar, /home/people/hkaya/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar, /home/people/hkaya/.m2/repository/junit/junit/4.10/junit-4.10.jar, /home/people/hkaya/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar, /home/people/hkaya/.m2/repository/org/ops4j/pax/logging/pax-logging-api/1.5.2/pax-logging-api-1.5.2.jar, /home/people/hkaya/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar, /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar, /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar, /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsarmolecular/2.2/cdk-qsarmolecular-2.2.jar, /home/people/hkaya/.m2/repository/gov/nist/math/jama/1.0.3/jama-1.0.3.jar, /home/people/hkaya/.m2/repository/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2.jar, /home/people/hkaya/.m2/repository/xom/xom/1.2.5/xom-1.2.5.jar, /home/people/hkaya/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar, /home/people/hkaya/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar, /home/people/hkaya/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar, /home/people/hkaya/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar, /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-core/1.2/beam-core-1.2.jar, /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-func/1.2/beam-func-1.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-interfaces/2.2/cdk-interfaces-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-core/2.2/cdk-core-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-standard/2.2/cdk-standard-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-atomtype/2.2/cdk-atomtype-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-valencycheck/2.2/cdk-valencycheck-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-reaction/2.2/cdk-reaction-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-charges/2.2/cdk-charges-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-io/2.2/cdk-io-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsar/2.2/cdk-qsar-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smiles/2.2/cdk-smiles-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-ioformats/2.2/cdk-ioformats-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smarts/2.2/cdk-smarts-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-formula/2.2/cdk-formula-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-isomorphism/2.2/cdk-isomorphism-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-dict/2.2/cdk-dict-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fragment/2.2/cdk-fragment-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fingerprint/2.2/cdk-fingerprint-2.2.jar, /home/people/hkaya/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-hash/2.2/cdk-hash-2.2.jar]
+[DEBUG]   (f) compileSourceRoots = [/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/main/java]
+[DEBUG]   (f) compilerArguments = {Xmaxerrs=10000, Xmaxwarns=10000}
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/generated-sources/annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.0:compile {execution: default-compile}
+[DEBUG]   (f) optimize = true
+[DEBUG]   (f) outputDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+[DEBUG]   (f) projectArtifact = org.cytoscape.CytoCopasi:CytoCopasi:bundle:1
+[DEBUG]   (f) showDeprecation = true
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 7
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 7
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/main/java]
+[DEBUG] Classpath: [/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+ /home/people/hkaya/.m2/repository/org/cytoscape/work-api/3.7.2/work-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/service-api/3.7.2/service-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/model-api/3.7.2/model-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/event-api/3.7.2/event-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/viewmodel-api/3.7.2/viewmodel-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/session-api/3.7.2/session-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/vizmap-api/3.7.2/vizmap-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/property-api/3.7.2/property-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/swing-application-api/3.7.2/swing-application-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/work-swing-api/3.7.2/work-swing-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/application-api/3.7.2/application-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/presentation-api/3.7.2/presentation-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/swing-util-api/3.7.2/swing-util-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/util-api/3.7.2/util-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar
+ /home/people/hkaya/.m2/repository/junit/junit/4.10/junit-4.10.jar
+ /home/people/hkaya/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar
+ /home/people/hkaya/.m2/repository/org/ops4j/pax/logging/pax-logging-api/1.5.2/pax-logging-api-1.5.2.jar
+ /home/people/hkaya/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar
+ /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar
+ /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar
+ /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsarmolecular/2.2/cdk-qsarmolecular-2.2.jar
+ /home/people/hkaya/.m2/repository/gov/nist/math/jama/1.0.3/jama-1.0.3.jar
+ /home/people/hkaya/.m2/repository/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2.jar
+ /home/people/hkaya/.m2/repository/xom/xom/1.2.5/xom-1.2.5.jar
+ /home/people/hkaya/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar
+ /home/people/hkaya/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar
+ /home/people/hkaya/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar
+ /home/people/hkaya/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar
+ /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-core/1.2/beam-core-1.2.jar
+ /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-func/1.2/beam-func-1.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-interfaces/2.2/cdk-interfaces-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-core/2.2/cdk-core-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-standard/2.2/cdk-standard-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-atomtype/2.2/cdk-atomtype-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-valencycheck/2.2/cdk-valencycheck-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-reaction/2.2/cdk-reaction-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-charges/2.2/cdk-charges-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-io/2.2/cdk-io-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsar/2.2/cdk-qsar-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smiles/2.2/cdk-smiles-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-ioformats/2.2/cdk-ioformats-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smarts/2.2/cdk-smarts-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-formula/2.2/cdk-formula-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-isomorphism/2.2/cdk-isomorphism-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-dict/2.2/cdk-dict-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fragment/2.2/cdk-fragment-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fingerprint/2.2/cdk-fingerprint-2.2.jar
+ /home/people/hkaya/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-hash/2.2/cdk-hash-2.2.jar]
+[DEBUG] Output directory: /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ CytoCopasi ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:3.2.0:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.2.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:3.2.0:testResources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: org.cytoscape.CytoCopasi:CytoCopasi:1 @ /home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {env.TERM=xterm-256color, java.specification.version=11, sun.cpu.isalist=, sun.arch.data.model=64, java.vendor.url=https://www.redhat.com/, env.MODULESHOME=/usr/share/Modules, sun.boot.library.path=/usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64/lib, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X package, jdk.debug=release, maven.version=3.6.0, maven-compiler-plugin.version=3.8.0, env.BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+}, java.specification.vendor=Oracle Corporation, java.version.date=2020-10-20, java.home=/usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64, env.SCHRODINGER=/opt/schrodinger2017-1, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, env.SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.9+11-LTS, env.CURRIP=10.10.11.117, env.PATH=/home/people/hkaya/Downloads/apache-maven-3.6.0/bin:/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin:/opt/scru_applications/charmm/bin:/opt/maui/bin:/opt/torque/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/scratch/hkaya/vmd/vmd-1.9.3/bin, env.LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:, env.XDG_SEAT=seat0, file.encoding=UTF-8, java.vendor.version=18.9, env.HOSTNAME=workstation3.cem-uct.ac.za, env.HISTCONTROL=ignoredups, env.XDG_SESSION_DESKTOP=gnome, env.SHLVL=3, project.baseUri=file:/home/people/hkaya/git/cytoscape-api/CytoCopasi/, java.io.tmpdir=/tmp, java.version=11.0.9, env.CONDA_PYTHON_EXE=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin/python, java.vm.specification.name=Java Virtual Machine Specification, cytoscape.api.version=3.8.2, java.awt.printerjob=sun.print.PSPrinterJob, java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, bundle.namespace=org.cytoscape.CytoCopasi, env.WINDOWPATH=1, java.vendor=Red Hat, Inc., classworlds.conf=/home/people/hkaya/Downloads/apache-maven-3.6.0/bin/m2.conf, sun.io.unicode.encoding=UnicodeLittle, env.XAUTHORITY=/run/gdm/auth-for-hkaya@cem-uct.ac.za-nVljDa/database, sun.desktop=gnome, maven-bundle-plugin.version=5.1.1, env.SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2054,unix/unix:/tmp/.ICE-unix/2054, env.LANG=en_US.UTF-8, env.QTINC=/usr/lib64/qt-3.3/include, env.CONDA_SHLVL=1, env.FFIELD=/home/people/hkaya/FFIELD, env.XDG_DATA_DIRS=/home/people/hkaya/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/, user.timezone=, os.name=Linux, java.vm.specification.version=11, junit.version=4.12, env.DISPLAY=:0, env.KDEDIRS=/usr, env.WORKSTATION_GROUP=silicon platinum osmium iridium thallium polonium boron carbon nitrogen tungsten neon magnesium sodium tellurium antimony phosphorous sulphur potassium chlorine argon oxygen calcium cobalt workstation1 workstation2 workstation3 workstation4 vislab03 iodine, user.home=/home/people/hkaya, env.DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-JY0XE1MZJ9,guid=60b085c59e09ec6f7663e3f760dad640, maven.build.timestamp=2021-06-29T12:17:56Z, env.COLORTERM=truecolor, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, env.DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-JY0XE1MZJ9,guid=60b085c59e09ec6f7663e3f760dad640, path.separator=:, os.version=3.10.0-693.17.1.el7.x86_64, env.MODULEPATH=/home/people/profile/bash/modules:/home/people/profile/bash/modules:/usr/share/Modules/modulefiles:/etc/modulefiles, env.MAIL=/var/spool/mail/hkaya@cem-uct.ac.za, env.IMSETTINGS_INTEGRATE_DESKTOP=yes, java.vm.name=OpenJDK 64-Bit Server VM, env.SHELL=/bin/bash, env.HISTSIZE=1000, env.VTE_VERSION=4602, env.USERNAME=hkaya, os.arch=amd64, maven.multiModuleProjectDirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.DESKTOP_SESSION=gnome, env.MAVEN_PROJECTBASEDIR=/home/people/hkaya/git/cytoscape-api/CytoCopasi, java.vm.info=mixed mode, sharing, env._LMFILES_=/home/people/profile/bash/modules/scru:/home/people/profile/bash/modules/queue:/home/people/profile/bash/modules/charmm/charmm.cluster:/home/people/profile/bash/modules/schrodinger/2017-1, env.USER=hkaya, java.class.version=55.0, awt.toolkit=sun.awt.X11.XToolkit, sun.jnu.encoding=UTF-8, env.LM_LICENSE_FILE=27008@schrodinger, env._CE_CONDA=, maven.build.version=Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T20:41:47+02:00), maven.home=/home/people/hkaya/Downloads/apache-maven-3.6.0, osgi.api.version=6.0.0, bundle.symbolicName=org.cytoscape.CytoCopasi, env.GDMSESSION=gnome, env.CONDA_PREFIX=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, env.GDM_LANG=en_US.UTF-8, env.SCHRODINGER_TMPDIR=/scratch/hkaya, env.QT_QPA_PLATFORMTHEME=qgnomeplatform, env.WINDOWID=37754406, user.name=hkaya@cem-uct.ac.za, env.LOGNAME=hkaya, env.DBUS_STARTER_BUS_TYPE=session, env.XDG_VTNR=1, env.CONDA_DEFAULT_ENV=base, env.SSH_AUTH_SOCK=/run/user/106800026/keyring/ssh, env.QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins, env.XDG_RUNTIME_DIR=/run/user/106800026, env.XMODIFIERS=@im=none, sun.os.patch.level=unknown, env.TMPDIR=/scratch/hkaya, env.XDG_SESSION_TYPE=x11, library.jansi.path=/home/people/hkaya/Downloads/apache-maven-3.6.0/lib/jansi-native, env.OLDPWD=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.PWD=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.LESSOPEN=||/usr/bin/lesspipe.sh %s, java.class.path=/home/people/hkaya/Downloads/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar, env.HOME=/home/people/hkaya, env.QT_IM_MODULE=xim, java.vm.vendor=Red Hat, Inc., maven.conf=/home/people/hkaya/Downloads/apache-maven-3.6.0/conf, sun.java.launcher=SUN_STANDARD, user.country=US, sun.cpu.endian=little, env.QT_GRAPHICSSYSTEM_CHECKED=1, user.language=en, env.CONDA_EXE=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin/conda, env.IMSETTINGS_MODULE=none, env.PROFILE=/home/people/hkaya/../profiles, env.LOADEDMODULES=scru:queue:charmm/charmm.cluster:schrodinger/2017-1, maven-surefire-plugin.version=3.0.0-M5, env.XDG_MENU_PREFIX=gnome-, java.runtime.name=OpenJDK Runtime Environment, env.XDG_SESSION_ID=1, env.QTDIR=/usr/lib64/qt-3.3, env.CONDA_PROMPT_MODIFIER=(base) , env.QTLIB=/usr/lib64/qt-3.3/lib, env.MAVEN_CMD_LINE_ARGS= -X package, java.vendor.url.bug=https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%207&component=java-11-openjdk, user.dir=/home/people/hkaya/git/cytoscape-api/CytoCopasi, env.XDG_CURRENT_DESKTOP=GNOME, java.vm.version=11.0.9+11-LTS, env._CE_M=, env.KRB5CCNAME=KEYRING:persistent:106800026}
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Using 'null' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/test/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ CytoCopasi ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.0:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.0:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = /home/people/hkaya/git/cytoscape-api/CytoCopasi
+[DEBUG]   (f) buildDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target
+[DEBUG]   (f) classpathElements = [/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/test-classes, /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes, /home/people/hkaya/.m2/repository/org/cytoscape/work-api/3.7.2/work-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar, /home/people/hkaya/.m2/repository/org/cytoscape/service-api/3.7.2/service-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/model-api/3.7.2/model-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/event-api/3.7.2/event-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/viewmodel-api/3.7.2/viewmodel-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/session-api/3.7.2/session-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/vizmap-api/3.7.2/vizmap-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/property-api/3.7.2/property-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/swing-application-api/3.7.2/swing-application-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/work-swing-api/3.7.2/work-swing-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/application-api/3.7.2/application-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/presentation-api/3.7.2/presentation-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/swing-util-api/3.7.2/swing-util-api-3.7.2.jar, /home/people/hkaya/.m2/repository/org/cytoscape/util-api/3.7.2/util-api-3.7.2.jar, /home/people/hkaya/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar, /home/people/hkaya/.m2/repository/junit/junit/4.10/junit-4.10.jar, /home/people/hkaya/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar, /home/people/hkaya/.m2/repository/org/ops4j/pax/logging/pax-logging-api/1.5.2/pax-logging-api-1.5.2.jar, /home/people/hkaya/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar, /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar, /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar, /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsarmolecular/2.2/cdk-qsarmolecular-2.2.jar, /home/people/hkaya/.m2/repository/gov/nist/math/jama/1.0.3/jama-1.0.3.jar, /home/people/hkaya/.m2/repository/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2.jar, /home/people/hkaya/.m2/repository/xom/xom/1.2.5/xom-1.2.5.jar, /home/people/hkaya/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar, /home/people/hkaya/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar, /home/people/hkaya/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar, /home/people/hkaya/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar, /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-core/1.2/beam-core-1.2.jar, /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-func/1.2/beam-func-1.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-interfaces/2.2/cdk-interfaces-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-core/2.2/cdk-core-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-standard/2.2/cdk-standard-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-atomtype/2.2/cdk-atomtype-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-valencycheck/2.2/cdk-valencycheck-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-reaction/2.2/cdk-reaction-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-charges/2.2/cdk-charges-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-io/2.2/cdk-io-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsar/2.2/cdk-qsar-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smiles/2.2/cdk-smiles-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-ioformats/2.2/cdk-ioformats-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smarts/2.2/cdk-smarts-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-formula/2.2/cdk-formula-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-isomorphism/2.2/cdk-isomorphism-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-dict/2.2/cdk-dict-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fragment/2.2/cdk-fragment-2.2.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fingerprint/2.2/cdk-fingerprint-2.2.jar, /home/people/hkaya/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar, /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-hash/2.2/cdk-hash-2.2.jar]
+[DEBUG]   (f) compileSourceRoots = [/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/test/java]
+[DEBUG]   (f) compilerArguments = {Xmaxerrs=10000, Xmaxwarns=10000}
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/generated-test-sources/test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.0:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = true
+[DEBUG]   (f) outputDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/test-classes
+[DEBUG]   (f) showDeprecation = true
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 7
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 7
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/test/java]
+[DEBUG] Classpath: [/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/test-classes
+ /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+ /home/people/hkaya/.m2/repository/org/cytoscape/work-api/3.7.2/work-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/service-api/3.7.2/service-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/model-api/3.7.2/model-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/event-api/3.7.2/event-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/viewmodel-api/3.7.2/viewmodel-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/session-api/3.7.2/session-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/vizmap-api/3.7.2/vizmap-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/property-api/3.7.2/property-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/swing-application-api/3.7.2/swing-application-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/work-swing-api/3.7.2/work-swing-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/application-api/3.7.2/application-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/presentation-api/3.7.2/presentation-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/swing-util-api/3.7.2/swing-util-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/org/cytoscape/util-api/3.7.2/util-api-3.7.2.jar
+ /home/people/hkaya/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar
+ /home/people/hkaya/.m2/repository/junit/junit/4.10/junit-4.10.jar
+ /home/people/hkaya/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar
+ /home/people/hkaya/.m2/repository/org/ops4j/pax/logging/pax-logging-api/1.5.2/pax-logging-api-1.5.2.jar
+ /home/people/hkaya/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar
+ /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar
+ /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar
+ /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsarmolecular/2.2/cdk-qsarmolecular-2.2.jar
+ /home/people/hkaya/.m2/repository/gov/nist/math/jama/1.0.3/jama-1.0.3.jar
+ /home/people/hkaya/.m2/repository/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2.jar
+ /home/people/hkaya/.m2/repository/xom/xom/1.2.5/xom-1.2.5.jar
+ /home/people/hkaya/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar
+ /home/people/hkaya/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar
+ /home/people/hkaya/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar
+ /home/people/hkaya/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar
+ /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-core/1.2/beam-core-1.2.jar
+ /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-func/1.2/beam-func-1.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-interfaces/2.2/cdk-interfaces-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-core/2.2/cdk-core-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-standard/2.2/cdk-standard-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-atomtype/2.2/cdk-atomtype-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-valencycheck/2.2/cdk-valencycheck-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-reaction/2.2/cdk-reaction-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-charges/2.2/cdk-charges-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-io/2.2/cdk-io-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsar/2.2/cdk-qsar-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smiles/2.2/cdk-smiles-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-ioformats/2.2/cdk-ioformats-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smarts/2.2/cdk-smarts-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-formula/2.2/cdk-formula-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-isomorphism/2.2/cdk-isomorphism-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-dict/2.2/cdk-dict-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fragment/2.2/cdk-fragment-2.2.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fingerprint/2.2/cdk-fingerprint-2.2.jar
+ /home/people/hkaya/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-hash/2.2/cdk-hash-2.2.jar]
+[DEBUG] Output directory: /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/test-classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ CytoCopasi ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=50946, ConflictMarker.markTime=17987, ConflictMarker.nodeCount=20, ConflictIdSorter.graphTime=9395, ConflictIdSorter.topsortTime=14425, ConflictIdSorter.conflictIdCount=16, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=162591, ConflictResolver.conflictItemCount=20, DefaultDependencyCollector.collectTime=102655138, DefaultDependencyCollector.transformTime=298225}
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:3.0.0-M5:
+[DEBUG]    org.apache.maven.surefire:maven-surefire-common:jar:3.0.0-M5:compile
+[DEBUG]       org.apache.maven.surefire:surefire-api:jar:3.0.0-M5:compile
+[DEBUG]          org.apache.maven.surefire:surefire-logger-api:jar:3.0.0-M5:compile
+[DEBUG]       org.apache.maven.surefire:surefire-extensions-api:jar:3.0.0-M5:compile
+[DEBUG]       org.apache.maven.surefire:surefire-booter:jar:3.0.0-M5:compile
+[DEBUG]          org.apache.maven.surefire:surefire-extensions-spi:jar:3.0.0-M5:compile
+[DEBUG]       org.apache.maven:maven-toolchain:jar:3.0-alpha-2:compile
+[DEBUG]       org.apache.maven.shared:maven-artifact-transfer:jar:0.11.0:compile
+[DEBUG]          org.apache.maven.shared:maven-common-artifact-filters:jar:3.1.0:compile
+[DEBUG]             org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]          commons-codec:commons-codec:jar:1.11:compile
+[DEBUG]       org.codehaus.plexus:plexus-java:jar:1.0.5:compile
+[DEBUG]          org.ow2.asm:asm:jar:7.2:compile
+[DEBUG]          com.thoughtworks.qdox:qdox:jar:2.0-M9:compile
+[DEBUG]       org.apache.maven.surefire:surefire-shared-utils:jar:3.0.0-M4:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:1.1:runtime
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5
+[DEBUG]   Imported:  < project>org.cytoscape.CytoCopasi:CytoCopasi:1
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.plugins:maven-surefire-plugin:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.surefire:maven-surefire-common:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.surefire:surefire-logger-api:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.surefire:surefire-extensions-api:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.surefire:surefire-extensions-spi:jar:3.0.0-M5
+[DEBUG]   Included: org.apache.maven.shared:maven-artifact-transfer:jar:0.11.0
+[DEBUG]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:3.1.0
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.11
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:1.0.5
+[DEBUG]   Included: org.ow2.asm:asm:jar:7.2
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.0-M9
+[DEBUG]   Included: org.apache.maven.surefire:surefire-shared-utils:jar:3.0.0-M4
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test' with basic configurator -->
+[DEBUG]   (s) additionalClasspathElements = []
+[DEBUG]   (s) basedir = /home/people/hkaya/git/cytoscape-api/CytoCopasi
+[DEBUG]   (s) childDelegation = false
+[DEBUG]   (f) classesDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+[DEBUG]   (s) classpathDependencyExcludes = []
+[DEBUG]   (s) dependenciesToScan = []
+[DEBUG]   (s) disableXmlReport = false
+[DEBUG]   (s) enableAssertions = true
+[DEBUG]   (f) excludedEnvironmentVariables = []
+[DEBUG]   (f) forkCount = 1
+[DEBUG]   (s) forkMode = once
+[DEBUG]   (s) forkedProcessExitTimeoutInSeconds = 30
+[DEBUG]   (s) junitArtifactName = junit:junit
+[DEBUG]   (s) localRepository =       id: local
+      url: file:///home/people/hkaya/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[DEBUG]   (f) parallelMavenExecution = false
+[DEBUG]   (s) parallelOptimized = true
+[DEBUG]   (s) perCoreThreadCount = true
+[DEBUG]   (s) pluginArtifactMap = {org.apache.maven.plugins:maven-surefire-plugin=org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:3.0.0-M5:, org.apache.maven.surefire:maven-surefire-common=org.apache.maven.surefire:maven-surefire-common:jar:3.0.0-M5:compile, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:3.0.0-M5:compile, org.apache.maven.surefire:surefire-logger-api=org.apache.maven.surefire:surefire-logger-api:jar:3.0.0-M5:compile, org.apache.maven.surefire:surefire-extensions-api=org.apache.maven.surefire:surefire-extensions-api:jar:3.0.0-M5:compile, org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:3.0.0-M5:compile, org.apache.maven.surefire:surefire-extensions-spi=org.apache.maven.surefire:surefire-extensions-spi:jar:3.0.0-M5:compile, org.apache.maven:maven-toolchain=org.apache.maven:maven-toolchain:jar:3.0-alpha-2:compile, org.apache.maven.shared:maven-artifact-transfer=org.apache.maven.shared:maven-artifact-transfer:jar:0.11.0:compile, org.apache.maven.shared:maven-common-artifact-filters=org.apache.maven.shared:maven-common-artifact-filters:jar:3.1.0:compile, org.apache.maven:maven-plugin-api=org.apache.maven:maven-plugin-api:jar:3.0:compile, commons-codec:commons-codec=commons-codec:commons-codec:jar:1.11:compile, org.codehaus.plexus:plexus-java=org.codehaus.plexus:plexus-java:jar:1.0.5:compile, org.ow2.asm:asm=org.ow2.asm:asm:jar:7.2:compile, com.thoughtworks.qdox:qdox=com.thoughtworks.qdox:qdox:jar:2.0-M9:compile, org.apache.maven.surefire:surefire-shared-utils=org.apache.maven.surefire:surefire-shared-utils:jar:3.0.0-M4:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:1.1:runtime}
+[DEBUG]   (f) pluginDescriptor = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.HelpMojo', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:help'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.SurefirePlugin', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test'
+---
+[DEBUG]   (s) printSummary = true
+[DEBUG]   (s) project = MavenProject: org.cytoscape.CytoCopasi:CytoCopasi:1 @ /home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+[DEBUG]   (s) projectArtifactMap = {org.cytoscape:work-api=org.cytoscape:work-api:jar:3.7.2:compile, org.osgi:org.osgi.core=org.osgi:org.osgi.core:jar:6.0.0:provided, org.cytoscape:service-api=org.cytoscape:service-api:jar:3.7.2:compile, org.cytoscape:model-api=org.cytoscape:model-api:jar:3.7.2:compile, org.cytoscape:event-api=org.cytoscape:event-api:jar:3.7.2:compile, org.cytoscape:viewmodel-api=org.cytoscape:viewmodel-api:jar:3.7.2:compile, org.cytoscape:session-api=org.cytoscape:session-api:jar:3.7.2:compile, org.cytoscape:vizmap-api=org.cytoscape:vizmap-api:jar:3.7.2:compile, org.cytoscape:property-api=org.cytoscape:property-api:jar:3.7.2:compile, org.cytoscape:swing-application-api=org.cytoscape:swing-application-api:jar:3.7.2:compile, org.cytoscape:work-swing-api=org.cytoscape:work-swing-api:jar:3.7.2:compile, org.cytoscape:application-api=org.cytoscape:application-api:jar:3.7.2:compile, org.cytoscape:presentation-api=org.cytoscape:presentation-api:jar:3.7.2:compile, org.cytoscape:swing-util-api=org.cytoscape:swing-util-api:jar:3.7.2:compile, org.cytoscape:util-api=org.cytoscape:util-api:jar:3.7.2:compile, com.googlecode.json-simple:json-simple=com.googlecode.json-simple:json-simple:jar:1.1.1:compile, junit:junit=junit:junit:jar:4.10:compile, org.hamcrest:hamcrest-core=org.hamcrest:hamcrest-core:jar:1.1:compile, org.ops4j.pax.logging:pax-logging-api=org.ops4j.pax.logging:pax-logging-api:jar:1.5.2:provided, javax.xml.bind:jaxb-api=javax.xml.bind:jaxb-api:jar:2.3.0:compile, com.sun.xml.bind:jaxb-core=com.sun.xml.bind:jaxb-core:jar:2.3.0:compile, com.sun.xml.bind:jaxb-impl=com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile, org.COPASI:org.COPASI=org.COPASI:org.COPASI:jar:1:compile, org.openscience.cdk:cdk-qsarmolecular=org.openscience.cdk:cdk-qsarmolecular:jar:2.2:compile, gov.nist.math:jama=gov.nist.math:jama:jar:1.0.3:compile, javax.vecmath:vecmath=javax.vecmath:vecmath:jar:1.5.2:compile, xom:xom=xom:xom:jar:1.2.5:compile, xml-apis:xml-apis=xml-apis:xml-apis:jar:1.3.03:compile, xerces:xercesImpl=xerces:xercesImpl:jar:2.8.0:compile, xalan:xalan=xalan:xalan:jar:2.7.0:compile, com.google.guava:guava=com.google.guava:guava:jar:17.0:compile, uk.ac.ebi.beam:beam-core=uk.ac.ebi.beam:beam-core:jar:1.2:compile, uk.ac.ebi.beam:beam-func=uk.ac.ebi.beam:beam-func:jar:1.2:compile, org.openscience.cdk:cdk-interfaces=org.openscience.cdk:cdk-interfaces:jar:2.2:compile, org.openscience.cdk:cdk-core=org.openscience.cdk:cdk-core:jar:2.2:compile, org.openscience.cdk:cdk-standard=org.openscience.cdk:cdk-standard:jar:2.2:compile, org.openscience.cdk:cdk-atomtype=org.openscience.cdk:cdk-atomtype:jar:2.2:compile, org.openscience.cdk:cdk-valencycheck=org.openscience.cdk:cdk-valencycheck:jar:2.2:compile, org.openscience.cdk:cdk-reaction=org.openscience.cdk:cdk-reaction:jar:2.2:compile, org.openscience.cdk:cdk-charges=org.openscience.cdk:cdk-charges:jar:2.2:compile, org.openscience.cdk:cdk-io=org.openscience.cdk:cdk-io:jar:2.2:compile, org.openscience.cdk:cdk-qsar=org.openscience.cdk:cdk-qsar:jar:2.2:compile, org.openscience.cdk:cdk-smiles=org.openscience.cdk:cdk-smiles:jar:2.2:compile, org.openscience.cdk:cdk-ioformats=org.openscience.cdk:cdk-ioformats:jar:2.2:compile, org.openscience.cdk:cdk-smarts=org.openscience.cdk:cdk-smarts:jar:2.2:compile, org.openscience.cdk:cdk-formula=org.openscience.cdk:cdk-formula:jar:2.2:compile, org.openscience.cdk:cdk-isomorphism=org.openscience.cdk:cdk-isomorphism:jar:2.2:compile, org.openscience.cdk:cdk-dict=org.openscience.cdk:cdk-dict:jar:2.2:compile, org.openscience.cdk:cdk-fragment=org.openscience.cdk:cdk-fragment:jar:2.2:compile, org.openscience.cdk:cdk-fingerprint=org.openscience.cdk:cdk-fingerprint:jar:2.2:compile, org.apache.commons:commons-math3=org.apache.commons:commons-math3:jar:3.1.1:compile, org.openscience.cdk:cdk-hash=org.openscience.cdk:cdk-hash:jar:2.2:compile}
+[DEBUG]   (s) projectBuildDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target
+[DEBUG]   (s) projectRemoteRepositories = [      id: cytoscape_snapshots
+      url: http://code.cytoscape.org/nexus/content/repositories/snapshots/
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => false, update => daily]
+,       id: cytoscape_releases
+      url: http://code.cytoscape.org/nexus/content/repositories/releases/
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+,       id: lib
+      url: file:///${project.parent.basedir}/lib
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,       id: central
+      url: https://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+]
+[DEBUG]   (s) redirectTestOutputToFile = false
+[DEBUG]   (s) remoteRepositories = [      id: central
+      url: https://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => never]
+]
+[DEBUG]   (s) reportFormat = brief
+[DEBUG]   (s) reportsDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/surefire-reports
+[DEBUG]   (f) rerunFailingTestsCount = 0
+[DEBUG]   (f) reuseForks = true
+[DEBUG]   (s) runOrder = filesystem
+[DEBUG]   (s) session = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG]   (f) shutdown = exit
+[DEBUG]   (s) skip = false
+[DEBUG]   (f) skipAfterFailureCount = 0
+[DEBUG]   (s) skipTests = false
+[DEBUG]   (s) suiteXmlFiles = []
+[DEBUG]   (s) tempDir = surefire
+[DEBUG]   (s) testClassesDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/test-classes
+[DEBUG]   (s) testFailureIgnore = false
+[DEBUG]   (s) testNGArtifactName = org.testng:testng
+[DEBUG]   (s) testSourceDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/src/test/java
+[DEBUG]   (s) threadCountClasses = 0
+[DEBUG]   (s) threadCountMethods = 0
+[DEBUG]   (s) threadCountSuites = 0
+[DEBUG]   (s) trimStackTrace = true
+[DEBUG]   (s) useFile = true
+[DEBUG]   (s) useManifestOnlyJar = true
+[DEBUG]   (f) useModulePath = true
+[DEBUG]   (s) useSystemClassLoader = true
+[DEBUG]   (s) useUnlimitedThreads = false
+[DEBUG]   (s) workingDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi
+[DEBUG] -- end configuration --
+[DEBUG] Using JVM: /usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64/bin/java with Java version 11
+[INFO] 
+[INFO] --- maven-bundle-plugin:5.1.1:bundle (default-bundle) @ CytoCopasi ---
+[DEBUG] Configuring mojo org.apache.felix:maven-bundle-plugin:5.1.1:bundle from plugin realm ClassRealm[extension>org.apache.felix:maven-bundle-plugin:5.1.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@55054057]
+[DEBUG] Configuring mojo 'org.apache.felix:maven-bundle-plugin:5.1.1:bundle' with basic configurator -->
+[DEBUG]   (f) buildDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target
+[DEBUG]   (f) dependencyReducedPomLocation = /home/people/hkaya/git/cytoscape-api/CytoCopasi/dependency-reduced-pom.xml
+[DEBUG]   (f) finalName = CytoCopasi-1
+[DEBUG]   (f) instructions = {Bundle-Activator=org.cytoscape.CytoCopasi.CyActivator, Bundle-SymbolicName=org.cytoscape.CytoCopasi, Bundle-Version=1, Embed-Dependency=slf4j-api;scope=compile,
+		                log4j;scope=compile, Export-Package=!org.cytoscape.CytoCopasi.*, Private-Package=org.cytoscape.CytoCopasi.*}
+[DEBUG]   (f) localRepository =       id: local
+      url: file:///home/people/hkaya/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[DEBUG]   (f) m_mavenSession = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG]   (f) manifestLocation = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/META-INF
+[DEBUG]   (f) niceManifest = false
+[DEBUG]   (f) outputDirectory = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+[DEBUG]   (f) project = MavenProject: org.cytoscape.CytoCopasi:CytoCopasi:1 @ /home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+[DEBUG]   (f) remoteArtifactRepositories = [      id: cytoscape_snapshots
+      url: http://code.cytoscape.org/nexus/content/repositories/snapshots/
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => false, update => daily]
+,       id: cytoscape_releases
+      url: http://code.cytoscape.org/nexus/content/repositories/releases/
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+,       id: lib
+      url: file:///${project.parent.basedir}/lib
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,       id: central
+      url: https://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+]
+[DEBUG]   (f) scrLocation = /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@235d29d6
+[DEBUG] -- end configuration --
+[DEBUG] BND Instructions:
+#-----------------------------------------------------------------------
+#Tue Jun 29 14:17:57 SAST 2021
+env.TERM=xterm-256color
+project.build.version=1
+java.specification.version=11
+sun.cpu.isalist=
+sun.arch.data.model=64
+java.vendor.url=https\://www.redhat.com/
+-removeheaders=Include-Resource,Private-Package
+env.MODULESHOME=/usr/share/Modules
+project.build.licenses=[]
+-plugin=org.apache.felix.bundleplugin.BlueprintPlugin,aQute.lib.spring.SpringXMLType,org.apache.felix.bundleplugin.JpaPlugin
+sun.boot.library.path=/usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64/lib
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X package
+jdk.debug=release
+maven.version=3.6.0
+env.BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`\n}
+maven-compiler-plugin.version=3.8.0
+java.specification.vendor=Oracle Corporation
+Private-Package=org.cytoscape.CytoCopasi.*
+java.version.date=2020-10-20
+java.home=/usr/lib/jvm/java-11-openjdk-11.0.9.11-0.el7_9.x86_64
+project.packaging=bundle
+java.specification.name=Java Platform API Specification
+env.SCHRODINGER=/opt/schrodinger2017-1
+java.vm.specification.vendor=Oracle Corporation
+env.SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=11.0.9+11-LTS
+env.CURRIP=10.10.11.117
+env.PATH=/home/people/hkaya/Downloads/apache-maven-3.6.0/bin\:/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin\:/opt/scru_applications/charmm/bin\:/opt/maui/bin\:/opt/torque/bin\:/usr/local/bin\:/usr/local/sbin\:/usr/bin\:/usr/sbin\:/bin\:/sbin\:/scratch/hkaya/vmd/vmd-1.9.3/bin
+Import-Package=*
+project.build.packaging=bundle
+env.LS_COLORS=rs\=0\:di\=38;5;27\:ln\=38;5;51\:mh\=44;38;5;15\:pi\=40;38;5;11\:so\=38;5;13\:do\=38;5;5\:bd\=48;5;232;38;5;11\:cd\=48;5;232;38;5;3\:or\=48;5;232;38;5;9\:mi\=05;48;5;232;38;5;15\:su\=48;5;196;38;5;15\:sg\=48;5;11;38;5;16\:ca\=48;5;196;38;5;226\:tw\=48;5;10;38;5;16\:ow\=48;5;10;38;5;21\:st\=48;5;21;38;5;15\:ex\=38;5;34\:*.tar\=38;5;9\:*.tgz\=38;5;9\:*.arc\=38;5;9\:*.arj\=38;5;9\:*.taz\=38;5;9\:*.lha\=38;5;9\:*.lz4\=38;5;9\:*.lzh\=38;5;9\:*.lzma\=38;5;9\:*.tlz\=38;5;9\:*.txz\=38;5;9\:*.tzo\=38;5;9\:*.t7z\=38;5;9\:*.zip\=38;5;9\:*.z\=38;5;9\:*.Z\=38;5;9\:*.dz\=38;5;9\:*.gz\=38;5;9\:*.lrz\=38;5;9\:*.lz\=38;5;9\:*.lzo\=38;5;9\:*.xz\=38;5;9\:*.bz2\=38;5;9\:*.bz\=38;5;9\:*.tbz\=38;5;9\:*.tbz2\=38;5;9\:*.tz\=38;5;9\:*.deb\=38;5;9\:*.rpm\=38;5;9\:*.jar\=38;5;9\:*.war\=38;5;9\:*.ear\=38;5;9\:*.sar\=38;5;9\:*.rar\=38;5;9\:*.alz\=38;5;9\:*.ace\=38;5;9\:*.zoo\=38;5;9\:*.cpio\=38;5;9\:*.7z\=38;5;9\:*.rz\=38;5;9\:*.cab\=38;5;9\:*.jpg\=38;5;13\:*.jpeg\=38;5;13\:*.gif\=38;5;13\:*.bmp\=38;5;13\:*.pbm\=38;5;13\:*.pgm\=38;5;13\:*.ppm\=38;5;13\:*.tga\=38;5;13\:*.xbm\=38;5;13\:*.xpm\=38;5;13\:*.tif\=38;5;13\:*.tiff\=38;5;13\:*.png\=38;5;13\:*.svg\=38;5;13\:*.svgz\=38;5;13\:*.mng\=38;5;13\:*.pcx\=38;5;13\:*.mov\=38;5;13\:*.mpg\=38;5;13\:*.mpeg\=38;5;13\:*.m2v\=38;5;13\:*.mkv\=38;5;13\:*.webm\=38;5;13\:*.ogm\=38;5;13\:*.mp4\=38;5;13\:*.m4v\=38;5;13\:*.mp4v\=38;5;13\:*.vob\=38;5;13\:*.qt\=38;5;13\:*.nuv\=38;5;13\:*.wmv\=38;5;13\:*.asf\=38;5;13\:*.rm\=38;5;13\:*.rmvb\=38;5;13\:*.flc\=38;5;13\:*.avi\=38;5;13\:*.fli\=38;5;13\:*.flv\=38;5;13\:*.gl\=38;5;13\:*.dl\=38;5;13\:*.xcf\=38;5;13\:*.xwd\=38;5;13\:*.yuv\=38;5;13\:*.cgm\=38;5;13\:*.emf\=38;5;13\:*.axv\=38;5;13\:*.anx\=38;5;13\:*.ogv\=38;5;13\:*.ogx\=38;5;13\:*.aac\=38;5;45\:*.au\=38;5;45\:*.flac\=38;5;45\:*.mid\=38;5;45\:*.midi\=38;5;45\:*.mka\=38;5;45\:*.mp3\=38;5;45\:*.mpc\=38;5;45\:*.ogg\=38;5;45\:*.ra\=38;5;45\:*.wav\=38;5;45\:*.axa\=38;5;45\:*.oga\=38;5;45\:*.spx\=38;5;45\:*.xspf\=38;5;45\:
+env.XDG_SEAT=seat0
+file.encoding=UTF-8
+java.vendor.version=18.9
+env.HOSTNAME=workstation3.cem-uct.ac.za
+env.HISTCONTROL=ignoredups
+env.XDG_SESSION_DESKTOP=gnome
+env.SHLVL=3
+java.io.tmpdir=/tmp
+java.version=11.0.9
+env.CONDA_PYTHON_EXE=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin/python
+pom.contributors=[]
+java.vm.specification.name=Java Virtual Machine Specification
+project.pomFile=/home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+cytoscape.api.version=3.8.2
+java.awt.printerjob=sun.print.PSPrinterJob
+java.library.path=/usr/java/packages/lib\:/usr/lib64\:/lib64\:/lib\:/usr/lib
+bundle.namespace=org.cytoscape.CytoCopasi
+env.WINDOWPATH=1
+java.vendor=Red Hat, Inc.
+classworlds.conf=/home/people/hkaya/Downloads/apache-maven-3.6.0/bin/m2.conf
+sun.io.unicode.encoding=UnicodeLittle
+pom.build=org.apache.maven.model.Build@3b83459e
+env.XAUTHORITY=/run/gdm/auth-for-hkaya@cem-uct.ac.za-nVljDa/database
+sun.desktop=gnome
+maven-bundle-plugin.version=5.1.1
+project.build.directory=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target
+project.id=org.cytoscape.CytoCopasi\:CytoCopasi\:bundle\:1
+env.LANG=en_US.UTF-8
+env.SESSION_MANAGER=local/unix\:@/tmp/.ICE-unix/2054,unix/unix\:/tmp/.ICE-unix/2054
+project.build.modelVersion=4.0.0
+env.QTINC=/usr/lib64/qt-3.3/include
+pom.mailingLists=[]
+env.CONDA_SHLVL=1
+pom.pomFile=/home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+env.FFIELD=/home/people/hkaya/FFIELD
+project.groupId=org.cytoscape.CytoCopasi
+project.build.mailingLists=[]
+env.XDG_DATA_DIRS=/home/people/hkaya/.local/share/flatpak/exports/share/\:/var/lib/flatpak/exports/share/\:/usr/local/share/\:/usr/share/
+Bundle-SymbolicName=org.cytoscape.CytoCopasi
+project.build.name=CytoCopasi
+user.timezone=
+-fixupmessages=Classes found in the wrong directory;is\:\=warning
+pom.modelVersion=4.0.0
+os.name=Linux
+java.vm.specification.version=11
+env.DISPLAY=\:0
+junit.version=4.12
+Bundle-Activator=org.cytoscape.CytoCopasi.CyActivator
+env.KDEDIRS=/usr
+user.home=/home/people/hkaya
+env.WORKSTATION_GROUP=silicon platinum osmium iridium thallium polonium boron carbon nitrogen tungsten neon magnesium sodium tellurium antimony phosphorous sulphur potassium chlorine argon oxygen calcium cobalt workstation1 workstation2 workstation3 workstation4 vislab03 iodine
+pom.groupId=org.cytoscape.CytoCopasi
+env.DBUS_STARTER_ADDRESS=unix\:abstract\=/tmp/dbus-JY0XE1MZJ9,guid\=60b085c59e09ec6f7663e3f760dad640
+-sourcepath=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/main/java
+env.COLORTERM=truecolor
+pom.packaging=bundle
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+env.DBUS_SESSION_BUS_ADDRESS=unix\:abstract\=/tmp/dbus-JY0XE1MZJ9,guid\=60b085c59e09ec6f7663e3f760dad640
+path.separator=\:
+os.version=3.10.0-693.17.1.el7.x86_64
+Embed-Dependency=slf4j-api;scope\=compile,log4j;scope\=compile
+env.MODULEPATH=/home/people/profile/bash/modules\:/home/people/profile/bash/modules\:/usr/share/Modules/modulefiles\:/etc/modulefiles
+env.MAIL=/var/spool/mail/hkaya@cem-uct.ac.za
+pom.projectDirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.IMSETTINGS_INTEGRATE_DESKTOP=yes
+java.vm.name=OpenJDK 64-Bit Server VM
+project.build=org.apache.maven.model.Build@3b83459e
+env.SHELL=/bin/bash
+env.HISTSIZE=1000
+env.VTE_VERSION=4602
+env.USERNAME=hkaya
+os.arch=amd64
+maven.multiModuleProjectDirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.DESKTOP_SESSION=gnome
+env.MAVEN_PROJECTBASEDIR=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+java.vm.info=mixed mode, sharing
+env._LMFILES_=/home/people/profile/bash/modules/scru\:/home/people/profile/bash/modules/queue\:/home/people/profile/bash/modules/charmm/charmm.cluster\:/home/people/profile/bash/modules/schrodinger/2017-1
+java.class.version=55.0
+env.USER=hkaya
+project.build.build=org.apache.maven.model.Build@3b83459e
+awt.toolkit=sun.awt.X11.XToolkit
+sun.jnu.encoding=UTF-8
+project.name=CytoCopasi
+env.LM_LICENSE_FILE=27008@schrodinger
+Bundle-Name=CytoCopasi
+project.contributors=[]
+project.build.id=org.cytoscape.CytoCopasi\:CytoCopasi\:bundle\:1
+env._CE_CONDA=
+classifier=
+maven.build.version=Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T20\:41\:47+02\:00)
+maven.home=/home/people/hkaya/Downloads/apache-maven-3.6.0
+osgi.api.version=6.0.0
+bundle.symbolicName=org.cytoscape.CytoCopasi
+project.artifactId=CytoCopasi
+Include-Resource=libCopasiJava.so\=src/lib/libCopasiJava.so,copasi.jar\=src/lib/copasi.jar,org/COPASI/org.COPASI/maven-metadata.xml\=src/lib/org/COPASI/org.COPASI/maven-metadata.xml,org/COPASI/org.COPASI/maven-metadata.xml.sha1\=src/lib/org/COPASI/org.COPASI/maven-metadata.xml.sha1,org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1\=src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1,org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5\=src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5,org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1\=src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1,org/COPASI/org.COPASI/1/org.COPASI-1.jar\=src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar,org/COPASI/org.COPASI/1/org.COPASI-1.pom\=src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom,org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5\=src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5,org/COPASI/org.COPASI/maven-metadata.xml.md5\=src/lib/org/COPASI/org.COPASI/maven-metadata.xml.md5
+project.build.outputdirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes
+project.version=1
+env.GDMSESSION=gnome
+env.CONDA_PREFIX=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3
+file.separator=/
+java.vm.compressedOopsMode=Zero based
+line.separator=\n
+pom.name=CytoCopasi
+env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+pom.profiles=[]
+env.GDM_LANG=en_US.UTF-8
+project.baseDir=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.SCHRODINGER_TMPDIR=/scratch/hkaya
+project.build.projectDirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.QT_QPA_PLATFORMTHEME=qgnomeplatform
+env.WINDOWID=37754406
+user.name=hkaya@cem-uct.ac.za
+pom.version=1
+Export-Package=\!org.cytoscape.CytoCopasi.*
+env.LOGNAME=hkaya
+project.profiles=[]
+project.mailingLists=[]
+env.DBUS_STARTER_BUS_TYPE=session
+env.XDG_VTNR=1
+pom.licenses=[]
+env.CONDA_DEFAULT_ENV=base
+env.SSH_AUTH_SOCK=/run/user/106800026/keyring/ssh
+env.QT_PLUGIN_PATH=/usr/lib64/kde4/plugins\:/usr/lib/kde4/plugins
+env.XDG_RUNTIME_DIR=/run/user/106800026
+env.XMODIFIERS=@im\=none
+sun.os.patch.level=unknown
+env.TMPDIR=/scratch/hkaya
+env.XDG_SESSION_TYPE=x11
+library.jansi.path=/home/people/hkaya/Downloads/apache-maven-3.6.0/lib/jansi-native
+project.modelVersion=4.0.0
+env.OLDPWD=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.PWD=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.LESSOPEN=||/usr/bin/lesspipe.sh %s
+java.class.path=/home/people/hkaya/Downloads/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar
+env.HOME=/home/people/hkaya
+env.QT_IM_MODULE=xim
+java.vm.vendor=Red Hat, Inc.
+maven.conf=/home/people/hkaya/Downloads/apache-maven-3.6.0/conf
+project.developers=[]
+sun.java.launcher=SUN_STANDARD
+user.country=US
+project.build.profiles=[]
+sun.cpu.endian=little
+env.QT_GRAPHICSSYSTEM_CHECKED=1
+user.language=en
+project.build.developers=[]
+env.CONDA_EXE=/home/people/hkaya/Cytoscape_v3.8.2/anaconda3/bin/conda
+project.licenses=[]
+env.IMSETTINGS_MODULE=none
+project.build.groupId=org.cytoscape.CytoCopasi
+env.PROFILE=/home/people/hkaya/../profiles
+maven-symbolicname=org.cytoscape.CytoCopasi
+env.LOADEDMODULES=scru\:queue\:charmm/charmm.cluster\:schrodinger/2017-1
+maven-surefire-plugin.version=3.0.0-M5
+env.XDG_MENU_PREFIX=gnome-
+project.build.pomFile=/home/people/hkaya/git/cytoscape-api/CytoCopasi/pom.xml
+pom.artifactId=CytoCopasi
+project.projectDirectory=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+java.runtime.name=OpenJDK Runtime Environment
+project.dir=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+env.XDG_SESSION_ID=1
+env.QTDIR=/usr/lib64/qt-3.3
+pom.id=org.cytoscape.CytoCopasi\:CytoCopasi\:bundle\:1
+project.build.contributors=[]
+env.CONDA_PROMPT_MODIFIER=(base) 
+env.QTLIB=/usr/lib64/qt-3.3/lib
+env.MAVEN_CMD_LINE_ARGS=\ -X package
+java.vendor.url.bug=https\://bugzilla.redhat.com/enter_bug.cgi?product\=Red%20Hat%20Enterprise%20Linux%207&component\=java-11-openjdk
+user.dir=/home/people/hkaya/git/cytoscape-api/CytoCopasi
+project.build.artifactId=CytoCopasi
+env.XDG_CURRENT_DESKTOP=GNOME
+Bundle-Version=1
+java.vm.version=11.0.9+11-LTS
+pom.developers=[]
+env._CE_M=
+env.KRB5CCNAME=KEYRING\:persistent\:106800026
+#-----------------------------------------------------------------------
+
+[DEBUG] BND Classpath:
+#-----------------------------------------------------------------------
+-classpath:\
+ /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/work-api/3.7.2/work-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/service-api/3.7.2/service-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/model-api/3.7.2/model-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/event-api/3.7.2/event-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/viewmodel-api/3.7.2/viewmodel-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/session-api/3.7.2/session-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/vizmap-api/3.7.2/vizmap-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/property-api/3.7.2/property-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/swing-application-api/3.7.2/swing-application-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/work-swing-api/3.7.2/work-swing-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/application-api/3.7.2/application-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/presentation-api/3.7.2/presentation-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/swing-util-api/3.7.2/swing-util-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/org/cytoscape/util-api/3.7.2/util-api-3.7.2.jar,\
+ /home/people/hkaya/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar,\
+ /home/people/hkaya/.m2/repository/junit/junit/4.10/junit-4.10.jar,\
+ /home/people/hkaya/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar,\
+ /home/people/hkaya/.m2/repository/org/ops4j/pax/logging/pax-logging-api/1.5.2/pax-logging-api-1.5.2.jar,\
+ /home/people/hkaya/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar,\
+ /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar,\
+ /home/people/hkaya/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar,\
+ /home/people/hkaya/.m2/repository/org/COPASI/org.COPASI/1/org.COPASI-1.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsarmolecular/2.2/cdk-qsarmolecular-2.2.jar,\
+ /home/people/hkaya/.m2/repository/gov/nist/math/jama/1.0.3/jama-1.0.3.jar,\
+ /home/people/hkaya/.m2/repository/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2.jar,\
+ /home/people/hkaya/.m2/repository/xom/xom/1.2.5/xom-1.2.5.jar,\
+ /home/people/hkaya/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar,\
+ /home/people/hkaya/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar,\
+ /home/people/hkaya/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar,\
+ /home/people/hkaya/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar,\
+ /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-core/1.2/beam-core-1.2.jar,\
+ /home/people/hkaya/.m2/repository/uk/ac/ebi/beam/beam-func/1.2/beam-func-1.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-interfaces/2.2/cdk-interfaces-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-core/2.2/cdk-core-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-standard/2.2/cdk-standard-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-atomtype/2.2/cdk-atomtype-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-valencycheck/2.2/cdk-valencycheck-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-reaction/2.2/cdk-reaction-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-charges/2.2/cdk-charges-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-io/2.2/cdk-io-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-qsar/2.2/cdk-qsar-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smiles/2.2/cdk-smiles-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-ioformats/2.2/cdk-ioformats-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-smarts/2.2/cdk-smarts-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-formula/2.2/cdk-formula-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-isomorphism/2.2/cdk-isomorphism-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-dict/2.2/cdk-dict-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fragment/2.2/cdk-fragment-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-fingerprint/2.2/cdk-fingerprint-2.2.jar,\
+ /home/people/hkaya/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar,\
+ /home/people/hkaya/.m2/repository/org/openscience/cdk/cdk-hash/2.2/cdk-hash-2.2.jar
+#-----------------------------------------------------------------------
+
+[DEBUG] build
+[DEBUG] copy d=Jar:dot s=Jar:. p=org/cytoscape/CytoCopasi
+[DEBUG] copy d=Jar:dot s=Jar:. p=org/cytoscape/CytoCopasi/Example1
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/libCopasiJava.so path=libCopasiJava.so
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/copasi.jar path=copasi.jar
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/maven-metadata.xml path=org/COPASI/org.COPASI/maven-metadata.xml
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/maven-metadata.xml.sha1 path=org/COPASI/org.COPASI/maven-metadata.xml.sha1
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1 path=org/COPASI/org.COPASI/1/org.COPASI-1.jar.sha1
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5 path=org/COPASI/org.COPASI/1/org.COPASI-1.pom.md5
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1 path=org/COPASI/org.COPASI/1/org.COPASI-1.pom.sha1
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar path=org/COPASI/org.COPASI/1/org.COPASI-1.jar
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.pom path=org/COPASI/org.COPASI/1/org.COPASI-1.pom
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5 path=org/COPASI/org.COPASI/1/org.COPASI-1.jar.md5
+[DEBUG] copy d=Jar:dot s=/home/people/hkaya/git/cytoscape-api/CytoCopasi/src/lib/org/COPASI/org.COPASI/maven-metadata.xml.md5 path=org/COPASI/org.COPASI/maven-metadata.xml.md5
+[DEBUG] parseClassFile(): path=org/cytoscape/CytoCopasi/CyActivator.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/CyActivator.class
+[DEBUG] parseClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class
+[DEBUG] parseClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1.class
+[DEBUG] parseClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1Factory.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1Factory.class
+[DEBUG] get Manifest Info From Classpath for Jar:.
+[DEBUG] get Manifest Info From Classpath for Jar:work-api
+[DEBUG] collecting Contracts  from work-api
+[DEBUG] get Manifest Info From Classpath for Jar:org.osgi.core
+[DEBUG] collecting Contracts  from org.osgi.core
+[DEBUG] get Manifest Info From Classpath for Jar:service-api
+[DEBUG] collecting Contracts  from service-api
+[DEBUG] get Manifest Info From Classpath for Jar:model-api
+[DEBUG] collecting Contracts  from model-api
+[DEBUG] get Manifest Info From Classpath for Jar:event-api
+[DEBUG] collecting Contracts  from event-api
+[DEBUG] get Manifest Info From Classpath for Jar:viewmodel-api
+[DEBUG] collecting Contracts  from viewmodel-api
+[DEBUG] get Manifest Info From Classpath for Jar:session-api
+[DEBUG] collecting Contracts  from session-api
+[DEBUG] get Manifest Info From Classpath for Jar:vizmap-api
+[DEBUG] collecting Contracts  from vizmap-api
+[DEBUG] get Manifest Info From Classpath for Jar:property-api
+[DEBUG] collecting Contracts  from property-api
+[DEBUG] get Manifest Info From Classpath for Jar:swing-application-api
+[DEBUG] collecting Contracts  from swing-application-api
+[DEBUG] get Manifest Info From Classpath for Jar:work-swing-api
+[DEBUG] collecting Contracts  from work-swing-api
+[DEBUG] get Manifest Info From Classpath for Jar:application-api
+[DEBUG] collecting Contracts  from application-api
+[DEBUG] get Manifest Info From Classpath for Jar:presentation-api
+[DEBUG] collecting Contracts  from presentation-api
+[DEBUG] get Manifest Info From Classpath for Jar:swing-util-api
+[DEBUG] collecting Contracts  from swing-util-api
+[DEBUG] get Manifest Info From Classpath for Jar:util-api
+[DEBUG] collecting Contracts  from util-api
+[DEBUG] get Manifest Info From Classpath for Jar:json-simple
+[DEBUG] collecting Contracts  from json-simple
+[DEBUG] get Manifest Info From Classpath for Jar:junit
+[DEBUG] collecting Contracts  from junit
+[DEBUG] get Manifest Info From Classpath for Jar:hamcrest-core
+[DEBUG] collecting Contracts  from hamcrest-core
+[DEBUG] get Manifest Info From Classpath for Jar:pax-logging-api
+[DEBUG] collecting Contracts  from pax-logging-api
+[DEBUG] get Manifest Info From Classpath for Jar:jaxb-api
+[DEBUG] collecting Contracts  from jaxb-api
+[DEBUG] get Manifest Info From Classpath for Jar:jaxb-core
+[DEBUG] collecting Contracts  from jaxb-core
+[DEBUG] get Manifest Info From Classpath for Jar:jaxb-impl
+[DEBUG] collecting Contracts  from jaxb-impl
+[DEBUG] get Manifest Info From Classpath for Jar:org.COPASI
+[DEBUG] collecting Contracts  from org.COPASI
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-qsarmolecular
+[DEBUG] collecting Contracts  from cdk-qsarmolecular
+[DEBUG] get Manifest Info From Classpath for Jar:jama
+[DEBUG] collecting Contracts  from jama
+[DEBUG] get Manifest Info From Classpath for Jar:vecmath
+[DEBUG] collecting Contracts  from vecmath
+[DEBUG] get Manifest Info From Classpath for Jar:xom
+[DEBUG] collecting Contracts  from xom
+[DEBUG] get Manifest Info From Classpath for Jar:xml-apis
+[DEBUG] collecting Contracts  from xml-apis
+[DEBUG] get Manifest Info From Classpath for Jar:xercesImpl
+[DEBUG] collecting Contracts  from xercesImpl
+[DEBUG] get Manifest Info From Classpath for Jar:xalan
+[DEBUG] collecting Contracts  from xalan
+[DEBUG] get Manifest Info From Classpath for Jar:guava
+[DEBUG] collecting Contracts  from guava
+[DEBUG] get Manifest Info From Classpath for Jar:beam-core
+[DEBUG] collecting Contracts  from beam-core
+[DEBUG] get Manifest Info From Classpath for Jar:beam-func
+[DEBUG] collecting Contracts  from beam-func
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-interfaces
+[DEBUG] collecting Contracts  from cdk-interfaces
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-core
+[DEBUG] collecting Contracts  from cdk-core
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-standard
+[DEBUG] collecting Contracts  from cdk-standard
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-atomtype
+[DEBUG] collecting Contracts  from cdk-atomtype
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-valencycheck
+[DEBUG] collecting Contracts  from cdk-valencycheck
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-reaction
+[DEBUG] collecting Contracts  from cdk-reaction
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-charges
+[DEBUG] collecting Contracts  from cdk-charges
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-io
+[DEBUG] collecting Contracts  from cdk-io
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-qsar
+[DEBUG] collecting Contracts  from cdk-qsar
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-smiles
+[DEBUG] collecting Contracts  from cdk-smiles
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-ioformats
+[DEBUG] collecting Contracts  from cdk-ioformats
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-smarts
+[DEBUG] collecting Contracts  from cdk-smarts
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-formula
+[DEBUG] collecting Contracts  from cdk-formula
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-isomorphism
+[DEBUG] collecting Contracts  from cdk-isomorphism
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-dict
+[DEBUG] collecting Contracts  from cdk-dict
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-fragment
+[DEBUG] collecting Contracts  from cdk-fragment
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-fingerprint
+[DEBUG] collecting Contracts  from cdk-fingerprint
+[DEBUG] get Manifest Info From Classpath for Jar:commons-math3
+[DEBUG] collecting Contracts  from commons-math3
+[DEBUG] get Manifest Info From Classpath for Jar:cdk-hash
+[DEBUG] collecting Contracts  from cdk-hash
+[DEBUG] collecting Contracts  from -define-contract
+[DEBUG] activator org.cytoscape.CytoCopasi.CyActivator org.cytoscape.CytoCopasi.CyActivator
+[DEBUG] Trying pre-plugin org.apache.felix.bundleplugin.BlueprintPlugin
+[DEBUG] Trying pre-plugin aQute.lib.spring.SpringXMLType
+[DEBUG] Trying pre-plugin org.apache.felix.bundleplugin.JpaPlugin
+[DEBUG] begin ServiceComponent
+[DEBUG] end
+[DEBUG] begin CDIAnnotations
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/CyActivator.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/CyActivator.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1Factory.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1Factory.class
+[DEBUG] end
+[DEBUG] begin DSAnnotations
+[DEBUG] end
+[DEBUG] begin MetatypeAnnotations
+[DEBUG] Analyzing for Metatype annotations: -metatypeannotations: *
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/CyActivator.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/CyActivator.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1Factory.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1Factory.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/CyActivator.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/CyActivator.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1Factory.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1Factory.class
+[DEBUG] end
+[DEBUG] begin aQute.bnd.plugin.jpms.JPMSAnnotations@755b5f30
+[DEBUG] end
+[DEBUG] begin aQute.bnd.classindex.ClassIndexerAnalyzer@29bbc63c
+[DEBUG] end
+[DEBUG] begin org.apache.felix.bundleplugin.BlueprintPlugin@272778ae
+[DEBUG] end
+[DEBUG] begin aQute.lib.spring.SpringXMLType@3c18942
+[DEBUG] end
+[DEBUG] begin org.apache.felix.bundleplugin.JpaPlugin@2f0ccb34
+[DEBUG] end
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/CyActivator.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/CyActivator.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1$ExecuteCommandTask.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1.class
+[DEBUG] visitClassFile(): path=org/cytoscape/CytoCopasi/Example1/Example1Factory.class resource=/home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/org/cytoscape/CytoCopasi/Example1/Example1Factory.class
+[DEBUG] parseClassFile(): path=java/lang/Runnable.class resource=:jrt:/java.base/java/lang/Runnable.class:
+[DEBUG] parseClassFile(): path=org/osgi/framework/BundleActivator.class resource=:/home/people/hkaya/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar(org/osgi/framework/BundleActivator.class):
+[DEBUG] parseClassFile(): path=org/cytoscape/service/util/AbstractCyActivator.class resource=:/home/people/hkaya/.m2/repository/org/cytoscape/service-api/3.7.2/service-api-3.7.2.jar(org/cytoscape/service/util/AbstractCyActivator.class):
+[DEBUG] begin aQute.bnd.plugin.jpms.JPMSModuleInfoPlugin@1edfedf1
+[DEBUG] end
+[DEBUG] begin aQute.bnd.plugin.spi.SPIDescriptorGenerator@251a90ce
+[DEBUG] end
+[DEBUG] BND Manifest:
+#-----------------------------------------------------------------------
+Manifest-Version: 1.0
+Bnd-LastModified: 1624969077551
+Bundle-Activator: org.cytoscape.CytoCopasi.CyActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: CytoCopasi
+Bundle-SymbolicName: org.cytoscape.CytoCopasi
+Bundle-Version: 1
+Created-By: 11.0.9 (Red Hat, Inc.)
+Embed-Dependency: slf4j-api;scope=compile,log4j;scope=compile
+Import-Package: 
+ org.COPASI,
+ org.cytoscape.application;version="[3.7,4)",
+ org.cytoscape.service.util;version="[3.7,4)",
+ org.cytoscape.work;version="[3.7,4)",
+ org.osgi.framework;version="[1.8,2)",
+ org.slf4j;version="[1.5,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-5.1.1.202006162103
+#-----------------------------------------------------------------------
+
+[DEBUG] Final Manifest:
+#-----------------------------------------------------------------------
+Manifest-Version: 1.0
+Bnd-LastModified: 1624969077551
+Build-Jdk-Spec: 11
+Bundle-Activator: org.cytoscape.CytoCopasi.CyActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: CytoCopasi
+Bundle-SymbolicName: org.cytoscape.CytoCopasi
+Bundle-Version: 1
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: slf4j-api;scope=compile,log4j;scope=compile
+Import-Package: 
+ org.COPASI,
+ org.cytoscape.application;version="[3.7,4)",
+ org.cytoscape.service.util;version="[3.7,4)",
+ org.cytoscape.work;version="[3.7,4)",
+ org.osgi.framework;version="[1.8,2)",
+ org.slf4j;version="[1.5,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-5.1.1.202006162103
+#-----------------------------------------------------------------------
+
+[DEBUG] Write manifest to /home/people/hkaya/git/cytoscape-api/CytoCopasi/target/classes/META-INF/MANIFEST.MF
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.867 s
+[INFO] Finished at: 2021-06-29T14:17:59+02:00
+[INFO] ------------------------------------------------------------------------

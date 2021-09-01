@@ -16,6 +16,7 @@ import org.cytoscape.view.layout.CyLayoutAlgorithmManager;
 import org.cytoscape.view.model.CyNetworkViewFactory;
 import org.cytoscape.work.ServiceProperties;
 import org.cytoscape.work.SynchronousTaskManager;
+import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.swing.DialogTaskManager;
 import org.osgi.framework.BundleContext;
 import org.slf4j.LoggerFactory;
@@ -108,9 +109,12 @@ public class CyActivator extends AbstractCyActivator {
         SaveAsCpsAction saveAsCpsAction = new SaveAsCpsAction(cySwingApplication, fileUtil);
         ExportSBMLAction exportSBMLAction = new ExportSBMLAction(cySwingApplication, fileUtil);
         TimeCourseSimulationTask timeCourseSimulationTask = new TimeCourseSimulationTask(cySwingApplication, fileUtil);
+      //  PlotDataFactory plotDataFactory = new PlotDataFactory();
+        
         registerService(context, saveAsCpsAction,CyAction.class, properties);
         registerService(context,exportSBMLAction, CyAction.class, properties);
         registerService(context,timeCourseSimulationTask,CyAction.class,properties);
+       // registerService(context, plotDataFactory, TaskFactory.class, properties);
         
         
         CopasiFileFilter copasiFilter = new CopasiFileFilter(streamUtil);

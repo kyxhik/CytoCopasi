@@ -14,6 +14,7 @@
     <artifactId>CytoCopasi</artifactId>
     <description>Copasi Plugin for Cytoscape</description>
     <version>1.0</version>
+   
     <packaging>bundle</packaging>
 
     <name>CytoCopasi</name>
@@ -88,6 +89,7 @@
 		            <Bundle-Activator>org.cytoscape.CytoCopasi.CyActivator</Bundle-Activator>
 		            <Embed-Dependency>*;scope=!provided|test;groupId=!org.cytoscape</Embed-Dependency>
             		<Embed-Transitive>true</Embed-Transitive>
+            		<Import-Package>*;resolution:=optional</Import-Package>
 				</instructions>
 		    </configuration>
 		</plugin>
@@ -166,7 +168,11 @@
       <version>1</version>
     </dependency>
 
-
+	<dependency>
+	    <groupId>org.jfree</groupId>
+	    <artifactId>jfreechart</artifactId>
+	    <version>1.5.0</version>
+	</dependency>
 
 	
 	

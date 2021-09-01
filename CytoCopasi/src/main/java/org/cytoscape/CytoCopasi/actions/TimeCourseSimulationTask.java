@@ -36,6 +36,7 @@ import org.cytoscape.view.model.CyNetworkViewFactory;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskIterator;
 import org.cytoscape.work.TaskMonitor;
+
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.COPASI.*;
@@ -43,10 +44,12 @@ import org.cytoscape.CytoCopasi.AttributeUtil;
 import org.cytoscape.CytoCopasi.CopasiSaveDialog;
 
 import org.cytoscape.CytoCopasi.CyActivator;
+import org.cytoscape.CytoCopasi.GetPlot;
 import org.cytoscape.CytoCopasi.SimulationDialog;
 import org.cytoscape.CytoCopasi.Report.ParsingReportGenerator;
 import org.cytoscape.CytoCopasi.tasks.CopasiFileReaderTask;
 import org.cytoscape.CytoCopasi.tasks.CopasiReaderTaskFactory;
+import org.jfree.chart.*;
 
 
 
@@ -104,7 +107,7 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 				
 				Object[] possibilities = {"Concentration vs. Time", "Fluxes vs. Time", "Custom"};
 				
-				String s = (String)JOptionPane.showInputDialog(frame, "Choose the plot type", "Output Assistant", JOptionPane.PLAIN_MESSAGE, null, possibilities, possibilities[0]);
+				s = (String)JOptionPane.showInputDialog(frame, "Choose the plot type", "Output Assistant", JOptionPane.PLAIN_MESSAGE, null, possibilities, possibilities[0]);
 			
 			}
 			
@@ -290,32 +293,49 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 			
 			//for (int i = 0; i< iMax; i++)
 			//{
-				//for (int a = 0; a< lastIndex; a++) {
-				//ParsingReportGenerator.getInstance().appendLine(timeSeries.getTitle(i) + ": " + (new Double(timeSeries.getConcentrationData(a, i))).toString() );
-			//}
-			//}
+		//		for (int a = 0; a< lastIndex; a++) {
+		//		ParsingReportGenerator.getInstance().appendLine(timeSeries.getTitle(i) + ": " + (new Double(timeSeries.getConcentrationData(a, i))).toString() );
+		//	}
+		//	}
 			
-			double[] concentration = null;
-			double[] time = null;
+			double[] concentration = new double[lastIndex];
+			double[] time = new double[lastIndex];
 			for (int a = 0; a< lastIndex; a++) {
-				time[a]= a;
+				time[a]= a*simval[2];
+				//ParsingReportGenerator.getInstance().appendLine("time values are: " + time[a]);
 				concentration[a] = (new Double(timeSeries.getConcentrationData(a, 1)));
+				//ParsingReportGenerator.getInstance().appendLine("concentration data : " + timeSeries.getConcentrationData(a, 1));
+				
+				//ParsingReportGenerator.getInstance().appendLine("Concentration values are: " + concentration[a]);
 			}
 			
-			//PlotData plot = new PlotData();
-			//plot.SimulationPlot(time, concentration, taskMonitor, this);
+			
+			//simulationPlot(time, concentration, taskMonitor, this);
+			ParsingReportGenerator.getInstance().appendLine("time length: " + time.length);
+			ParsingReportGenerator.getInstance().appendLine("Concentration length: " + concentration.length);
+			
+			GetPlot getPlot = new GetPlot();
+			getPlot.create("Time Course Simulation", time, concentration);
 			
 			
-    		
-			return;
+		//	PlotData plot = new PlotData("Time Course Simulation", time, concentration);
+		
+			//plot.pack();
+			
+			//plot.setVisible(true);
+			
+			
 				
 			}
+		
+			
 	}
 	
-		 
+	
 	
 	
 }
+
 	
 		
 

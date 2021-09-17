@@ -31,6 +31,7 @@ import java.util.Properties;
 import org.cytoscape.CytoCopasi.actions.ExportSBMLAction;
 import org.cytoscape.CytoCopasi.actions.ImportAction;
 import org.cytoscape.CytoCopasi.actions.SaveAsCpsAction;
+import org.cytoscape.CytoCopasi.actions.SteadyStateTaskFactory;
 import org.cytoscape.CytoCopasi.actions.TimeCourseSimulationTask;
 import org.cytoscape.CytoCopasi.tasks.CopasiReaderTaskFactory;
 
@@ -57,6 +58,7 @@ public class CyActivator extends AbstractCyActivator {
     public static CyApplicationConfiguration cyAppConfig;
     public static ImportAction importAction;
     public static CopasiReaderTaskFactory copasiReaderTaskFactory;
+   
     //public static CyEventHelper cyEventHelper;
     public static CyApplicationManager cyApplicationManager;
     //public static CyTableManager cyTableManager;
@@ -93,10 +95,15 @@ public class CyActivator extends AbstractCyActivator {
         @SuppressWarnings("rawtypes")
         SynchronousTaskManager synchronousTaskManager = getService(context, SynchronousTaskManager.class);
 
+    	SteadyStateTaskFactory stdStTaskFactory = new SteadyStateTaskFactory();
     	
     
-   
-    	
+
+    	 
+    	 Properties stdProps = new Properties();
+    	 stdProps.put(ServiceProperties.PREFERRED_MENU, "Apps.CytoCopasi");
+        stdProps.put(ServiceProperties.TITLE, "SteadyState");
+        registerService(context,stdStTaskFactory, TaskFactory.class, stdProps);
     	
     	
         Properties properties = new Properties();

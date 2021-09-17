@@ -2,37 +2,47 @@ package org.cytoscape.CytoCopasi.actions;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.List;
 import java.awt.PopupMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Scanner;
 
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.cytoscape.application.swing.CySwingApplication;
-
+import org.cytoscape.model.CyColumn;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNetworkFactory;
+import org.cytoscape.model.CyNode;
+import org.cytoscape.model.CyRow;
+import org.cytoscape.model.CyTableUtil;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.util.swing.FileChooserFilter;
 import org.cytoscape.util.swing.FileUtil;
 import org.cytoscape.view.layout.CyLayoutAlgorithmManager;
 import org.cytoscape.view.model.CyNetworkViewFactory;
+import org.cytoscape.view.model.View;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskIterator;
 import org.cytoscape.work.TaskMonitor;
@@ -66,8 +76,10 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 	private String option;
 	private Object[] options;
 	private Object[] possibilities;
+	private Object[] myspecies;
+	private Object[] plotspecies;
 	private String possibility;
-	private String s;
+	private String[] s;
 	private TimeCourseSimulationTask.TimeCourseTask parentTask;
 	
 	
@@ -102,12 +114,42 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 		
 		btnOpen.addActionListener(new ActionListener() {
 			
+				@SuppressWarnings("deprecation")
 				@Override
 				public void actionPerformed (ActionEvent e) {
 				
-				Object[] possibilities = {"Concentration vs. Time", "Fluxes vs. Time", "Custom"};
+				JPanel panel = new JPanel();
+				try {
+					String modelName = new Scanner(CyActivator.getReportFile(1)).next();
+					CDataModel dm = CRootContainer.addDatamodel();
+					String modelString = new Scanner(new File(modelName)).useDelimiter("\\Z").next();
+					dm.loadFromString(modelString);
+					CModel model = dm.getModel();
+					
+					
+					int numreact = (int)model.getNumMetabs();
+					String[] possibilities = new String[numreact];
+					
+					for (int a = 0 ; a< numreact; a++) {
+						possibilities[a] = model.getMetabolite(a).getObjectDisplayName();
+						
+					}
+					JList<String> list = new JList<String>(possibilities);
+					panel.add(new JScrollPane(list));
+					
+					JOptionPane.showMessageDialog(null, panel, "Which Species Do You Want To Plot?", JOptionPane.QUESTION_MESSAGE);
+					myspecies = list.getSelectedValues();
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
-				s = (String)JOptionPane.showInputDialog(frame, "Choose the plot type", "Output Assistant", JOptionPane.PLAIN_MESSAGE, null, possibilities, possibilities[0]);
+				
+				
+				
+				
+				
+				
 			
 			}
 			
@@ -148,7 +190,7 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 	   // long[] simval = setData();
 	   
 		
-		final TimeCourseTask task = new TimeCourseTask(data, option, possibility);
+		final TimeCourseTask task = new TimeCourseTask(data, myspecies);
 		CyActivator.taskManager.execute(new TaskIterator(task));
 		
 	}
@@ -193,8 +235,8 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 		return menuName;
 	}
 	
-	String getS() {
-		return s;
+	Object[] setMySpecies() {
+		return myspecies;
 	}
 	
 	public class TimeCourseTask extends AbstractTask {
@@ -203,13 +245,12 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 		private double[] data;
 		private String option;
 		private String possibility;
-		private String s;
+		private Object[] myspecies;
 		
 		
-		public TimeCourseTask(double[] data, String option, String s) {
+		public TimeCourseTask(double[] data, Object[] myspecies) {
 			this.data = data;
-			this.option = option;
-			this.s = s;
+			this.myspecies = myspecies;
 			super.cancelled = false;
 		}
 		
@@ -226,9 +267,9 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 			String modelName = new Scanner(CyActivator.getReportFile(1)).next();
 			ParsingReportGenerator.getInstance().appendLine("model string is:" + modelName);
 			simval = setData();
-			possibility = s;
-			ParsingReportGenerator.getInstance().appendLine("plot type is:" + s);
-			simulation(simval, modelName, option, possibility, taskMonitor, this);
+			plotspecies = setMySpecies();
+			
+			simulation(simval, modelName, myspecies, taskMonitor, this);
 			
 			
 			}catch (Exception e) {
@@ -238,10 +279,10 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 			}
 		}
 		
-		public void simulation(double[] simval, String modelName, String option, String possibility, TaskMonitor taskMonitor, TimeCourseSimulationTask.TimeCourseTask timeCourseTask) throws Exception {
+		public void simulation(double[] simval, String modelName, Object[] myspecies, TaskMonitor taskMonitor, TimeCourseSimulationTask.TimeCourseTask timeCourseTask) throws Exception {
 			
 			parentTask = timeCourseTask;
-			
+			ParsingReportGenerator.getInstance().appendLine("myspecies are:" + myspecies[0] + " " + myspecies[1] + " " + myspecies[2]);
 			
 			CDataModel dm = CRootContainer.addDatamodel();
 			String modelString = new Scanner(new File(modelName)).useDelimiter("\\Z").next();
@@ -254,7 +295,11 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 			
 			
 			
+			
+			
 			CTrajectoryTask trajectoryTask = (CTrajectoryTask)dm.getTask("Time-Course");
+			
+			
 		
 			trajectoryTask.setMethodType(CTaskEnum.Task_timeCourse);
 			trajectoryTask.getProblem().setModel(dm.getModel());
@@ -283,6 +328,7 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 			
 			CTimeSeries timeSeries = trajectoryTask.getTimeSeries();
 			
+			
 
 			ParsingReportGenerator.getInstance().appendLine("The time series consists of " + (new Long (timeSeries.getRecordedSteps())).toString()+".");
 			ParsingReportGenerator.getInstance().appendLine("Each step contains " + (new Long(timeSeries.getNumVariables())).toString() + " variables.");
@@ -297,25 +343,65 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 		//		ParsingReportGenerator.getInstance().appendLine(timeSeries.getTitle(i) + ": " + (new Double(timeSeries.getConcentrationData(a, i))).toString() );
 		//	}
 		//	}
+			int[] metabindexes = new int[myspecies.length];
 			
-			double[] concentration = new double[lastIndex];
+			for (int i1 = 0; i1 < iMax ; i1++) {
+				for (int i2 = 0; i2< myspecies.length; i2++) {
+					ParsingReportGenerator.getInstance().appendLine("metabindex 1: " + myspecies[i2]);
+					ParsingReportGenerator.getInstance().appendLine("metabindex 2: " + model.getMetabolite(i1).getObjectDisplayName());
+				if ((myspecies[i2].equals(model.getMetabolite(i1).getObjectDisplayName())) ) {
+					metabindexes[i2] = i1;
+					ParsingReportGenerator.getInstance().appendLine("index: " + i1);
+				}
+			}
+			}
+			
+			ParsingReportGenerator.getInstance().appendLine("metabolite indexes are: " + metabindexes[0] + metabindexes[1] + metabindexes[2]);
+			
+			double[][] concdata = new double[lastIndex][metabindexes.length];
+			double[] timedata = new double[lastIndex];
+			for (int a = 0; a< lastIndex; a++) {
+				timedata[a]= a*simval[2];
+				for (int b = 0; b<metabindexes.length; b++) {
+					
+					concdata[a][b] = (new Double(timeSeries.getConcentrationData(a, b)));
+				}
+			}
+			
+			ParsingReportGenerator.getInstance().appendLine("concentration data 1: " + concdata[499][0]);
+			ParsingReportGenerator.getInstance().appendLine("concentration data 2: " + concdata[499][1]);
+			ParsingReportGenerator.getInstance().appendLine("concentration data 3: " + concdata[499][2]);
+			
+			double[] G6P = new double[lastIndex];
+			double[] ATP = new double[lastIndex];
+			double[] AMP = new double[lastIndex];
+			double[] F6P = new double[lastIndex];
+			double[] FRU16P2 = new double[lastIndex];
 			double[] time = new double[lastIndex];
 			for (int a = 0; a< lastIndex; a++) {
+				
 				time[a]= a*simval[2];
 				//ParsingReportGenerator.getInstance().appendLine("time values are: " + time[a]);
-				concentration[a] = (new Double(timeSeries.getConcentrationData(a, 1)));
-				//ParsingReportGenerator.getInstance().appendLine("concentration data : " + timeSeries.getConcentrationData(a, 1));
+				ATP[a] = (new Double(timeSeries.getConcentrationData(a, 14)));
+				G6P[a] = (new Double(timeSeries.getConcentrationData(a, 2)));
+				AMP[a] = (new Double(timeSeries.getConcentrationData(a, 16)));
+				F6P[a] = (new Double(timeSeries.getConcentrationData(a, 9)));
+				FRU16P2[a] = (new Double(timeSeries.getConcentrationData(a, 13)));
+				
+				CReaction reaction = model.getReaction(9);
+				
+				ParsingReportGenerator.getInstance().appendLine("flux is : " + reaction.getFlux());
 				
 				//ParsingReportGenerator.getInstance().appendLine("Concentration values are: " + concentration[a]);
 			}
 			
 			
 			//simulationPlot(time, concentration, taskMonitor, this);
-			ParsingReportGenerator.getInstance().appendLine("time length: " + time.length);
-			ParsingReportGenerator.getInstance().appendLine("Concentration length: " + concentration.length);
+			//ParsingReportGenerator.getInstance().appendLine("time length: " + time.length);
+			//ParsingReportGenerator.getInstance().appendLine("Concentration length: " + concentration.length);
 			
 			GetPlot getPlot = new GetPlot();
-			getPlot.create("Time Course Simulation", time, concentration);
+			getPlot.create("Time Course Simulation", time, ATP, G6P, AMP, F6P, FRU16P2);
 			
 			
 		//	PlotData plot = new PlotData("Time Course Simulation", time, concentration);

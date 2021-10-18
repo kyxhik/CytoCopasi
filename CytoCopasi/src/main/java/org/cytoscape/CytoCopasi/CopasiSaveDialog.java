@@ -49,7 +49,7 @@ public class CopasiSaveDialog extends JFileChooser {
             }
         });
 
-        setDialogTitle("Save network");
+        setDialogTitle("Save File");
 
         CyNetwork currentNetwork = CyActivator.cyApplicationManager.getCurrentNetwork();
         setSelectedFile(new File(getCurrentDirectory(),

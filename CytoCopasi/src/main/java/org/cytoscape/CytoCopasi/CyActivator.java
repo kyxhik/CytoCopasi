@@ -18,6 +18,7 @@ import org.cytoscape.work.ServiceProperties;
 import org.cytoscape.work.SynchronousTaskManager;
 import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.swing.DialogTaskManager;
+
 import org.osgi.framework.BundleContext;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +32,8 @@ import java.util.Properties;
 import org.cytoscape.CytoCopasi.actions.ExportSBMLAction;
 import org.cytoscape.CytoCopasi.actions.ImportAction;
 import org.cytoscape.CytoCopasi.actions.SaveAsCpsAction;
-import org.cytoscape.CytoCopasi.actions.SteadyStateTaskFactory;
+import org.cytoscape.CytoCopasi.actions.SteadyStateTask;
+import org.cytoscape.CytoCopasi.actions.Optimize;
 import org.cytoscape.CytoCopasi.actions.TimeCourseSimulationTask;
 import org.cytoscape.CytoCopasi.tasks.CopasiReaderTaskFactory;
 
@@ -95,15 +97,12 @@ public class CyActivator extends AbstractCyActivator {
         @SuppressWarnings("rawtypes")
         SynchronousTaskManager synchronousTaskManager = getService(context, SynchronousTaskManager.class);
 
-    	SteadyStateTaskFactory stdStTaskFactory = new SteadyStateTaskFactory();
+    	
     	
     
 
     	 
-    	 Properties stdProps = new Properties();
-    	 stdProps.put(ServiceProperties.PREFERRED_MENU, "Apps.CytoCopasi");
-        stdProps.put(ServiceProperties.TITLE, "SteadyState");
-        registerService(context,stdStTaskFactory, TaskFactory.class, stdProps);
+    	
     	
     	
         Properties properties = new Properties();
@@ -117,10 +116,13 @@ public class CyActivator extends AbstractCyActivator {
         ExportSBMLAction exportSBMLAction = new ExportSBMLAction(cySwingApplication, fileUtil);
         TimeCourseSimulationTask timeCourseSimulationTask = new TimeCourseSimulationTask(cySwingApplication, fileUtil);
       //  PlotDataFactory plotDataFactory = new PlotDataFactory();
-        
+        SteadyStateTask steadyStateTask = new SteadyStateTask(cySwingApplication, fileUtil);
+        Optimize optimize = new Optimize(cySwingApplication, fileUtil);
         registerService(context, saveAsCpsAction,CyAction.class, properties);
         registerService(context,exportSBMLAction, CyAction.class, properties);
         registerService(context,timeCourseSimulationTask,CyAction.class,properties);
+        registerService(context,steadyStateTask, CyAction.class, properties);
+        registerService(context,optimize, CyAction.class, properties);
        // registerService(context, plotDataFactory, TaskFactory.class, properties);
         
         

@@ -143,12 +143,63 @@
        <version>${cytoscape.api.version}</version>
        <scope>provided</scope>
      </dependency>
+      <dependency>
+            <groupId>org.cytoscape</groupId>
+            <artifactId>vizmap-api</artifactId>
+            <version>${cytoscape.api.version}</version>
+            <scope>provided</scope>
+	</dependency>
      <dependency>
         <groupId>org.cytoscape</groupId>
         <artifactId>layout-api</artifactId>
         <version>${cytoscape.api.version}</version>
         <scope>provided</scope>
       </dependency>
+      
+      <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>13</version>
+            <scope>provided</scope>
+        </dependency>
+      
+      
     <!-- OSGi core API -->
     <dependency>
       <groupId>org.osgi</groupId>

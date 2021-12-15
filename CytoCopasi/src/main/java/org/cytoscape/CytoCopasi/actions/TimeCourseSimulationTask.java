@@ -124,7 +124,13 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 					String modelName = new Scanner(CyActivator.getReportFile(1)).next();
 					CDataModel dm = CRootContainer.addDatamodel();
 					String modelString = new Scanner(new File(modelName)).useDelimiter("\\Z").next();
+					if (modelName.endsWith("cps")) {
+					
 					dm.loadFromString(modelString);
+					} else if (modelName.endsWith("sbml") || modelName.endsWith("xml")) {
+					dm.importSBML(modelName);
+					}
+					
 					CModel model = dm.getModel();
 					
 					
@@ -154,6 +160,9 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 					
 					throw new  RuntimeException("Species?");
 				
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 				
 				
@@ -280,6 +289,7 @@ public class TimeCourseSimulationTask extends AbstractCyAction {
 			//try {
 			String modelName = new Scanner(CyActivator.getReportFile(1)).next();
 			ParsingReportGenerator.getInstance().appendLine("model string is:" + modelName);
+			ParsingReportGenerator.getInstance().appendLine("network name is:" + CyActivator.cyApplicationManager.getCurrentNetworkView().toString());
 			simval = setData();
 			try {
 			plotspecies = setMySpecies();

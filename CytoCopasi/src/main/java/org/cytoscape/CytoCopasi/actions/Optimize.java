@@ -1,5 +1,6 @@
 package org.cytoscape.CytoCopasi.actions;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -18,11 +19,13 @@ import java.util.Scanner;
 
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
@@ -58,6 +61,7 @@ import org.COPASI.DataModelVector;
 import org.COPASI.ObjectStdVector;
 import org.COPASI.ReportItemVector;
 import org.cytoscape.CytoCopasi.CyActivator;
+import org.cytoscape.CytoCopasi.GetTable;
 import org.cytoscape.CytoCopasi.Report.ParsingReportGenerator;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
@@ -80,13 +84,21 @@ public class Optimize extends AbstractCyAction {
 	private String newExpression;
 	private String minmax;
 	private String mySubTask;
-	private String parameter;
+	private String[] parameter;
 	private CCopasiParameter newParameter;
-	private String lowB;
-	private String upB;
-	private String startV;
-	
-	private double startVal;
+	private String[] lowB;
+	private String[] upB;
+	private String[] startV;
+	private int count = 0;
+	JList<String> paramlist;
+	JList<String> lowerBlist;
+	JList<String> upperBlist;
+	JList<String> startValList;
+	DefaultListModel<String> parameters;
+	DefaultListModel<String> lowerBounds;
+	DefaultListModel<String> upperBounds;
+	DefaultListModel<String> startVals;
+	private double[] startValue;
 	
 	private Optimize.OptimTask parentTask;
 	public Optimize(CySwingApplication cySwingApplication, FileUtil fileUtil) {
@@ -102,13 +114,150 @@ public class Optimize extends AbstractCyAction {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		JFrame frame = new JFrame("Optimization");
+		JPanel myPanel = new JPanel();
 		
+		frame.setPreferredSize(new Dimension(1200,800));
+		myPanel.setPreferredSize(new Dimension(1200,800));
 		JTextArea field = new JTextArea(5, 30);
 		JTextArea field2 = new JTextArea(5, 30);
 		
 		
 		JTextField param = new JTextField(30);
+		JButton paramAdd = new JButton("+Add Parameter+");
+		parameters = new DefaultListModel<>();
+		lowerBounds = new DefaultListModel<>();
+		upperBounds = new DefaultListModel<>();
+		startVals = new DefaultListModel<>();
+		paramlist = new JList<>(parameters);
+		lowerBlist = new JList<>(lowerBounds);
+		upperBlist = new JList<>(upperBounds);
+		startValList = new JList<>(startVals);
+		paramAdd.addActionListener((ActionListener) new ActionListener() {
+			
+			public void actionPerformed(ActionEvent ae) {
+				Box newParamBox = Box.createHorizontalBox();
+				Box overallParam = Box.createVerticalBox();
+				
+				//JButton btnParam = new JButton("->");
+				
+				JButton newBtnParam = new JButton("->");
+				JTextField newParam = new JTextField(30);
+				JTextField newLow = new JTextField(5);
+				JTextField newUp = new JTextField(5);
+				JTextField newSt = new JTextField(5);
+				newLow.setEditable(false);
+				newUp.setEditable(false);
+				newSt.setEditable(false);
+				
+				JLabel newParamLabel = new JLabel("Parameter_" + (count+1));
+				JLabel newLowLabel = new JLabel("Lower Bound");
+				JLabel newUpLabel = new JLabel("Upper Bound");
+				JLabel newStLabel = new JLabel("Initial Value");
+				
+				
+				
+				newParamBox.add(newParamLabel);
+				newParamBox.add(newBtnParam);
+				newParamBox.add(newParam);
+				newParamBox.add(newLowLabel);
+				newParamBox.add(newLow);
+				newParamBox.add(newUpLabel);
+				newParamBox.add(newUp);
+				newParamBox.add(newStLabel);
+				newParamBox.add(newSt);
+				count++;
+				overallParam.add(newParamBox);
+				myPanel.add(overallParam);
+				myPanel.validate();
+				myPanel.repaint();
+				
+				
+				
+				newBtnParam.addActionListener((ActionListener) new ActionListener() {
+					@SuppressWarnings("deprecation")
+					@Override
+					public void actionPerformed (ActionEvent evt) {
+						JPanel panel = new JPanel();
+						JTextField lowBBox = new JTextField(5);
+						JTextField upBBox = new JTextField(5);
+						JTextField stBox = new JTextField(5);
+						JLabel lowLabel = new JLabel("Lower Bound");
+						JLabel upLabel = new JLabel("Upper Bound");
+						JLabel stLabel = new JLabel("Initial Value");
+						DefaultMutableTreeNode reactions = new DefaultMutableTreeNode("Reactions");
+						DefaultMutableTreeNode species = new DefaultMutableTreeNode("Species");
+						DefaultMutableTreeNode optim = new DefaultMutableTreeNode("Parameter Items");
+						String[] reactCat = {"Fluxes (amount)", "Fluxes (particle numbers)", "Reaction Parameters"};
+						String[] specCat = {"Inital Concentrations", "Rates", "Transient Concentrations"};
+						String [] optCat =  {"Reactions", "Species"};
+						
+						try {
+							createNodes(optim, optCat);
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						tree = new JTree(optim);
+						//tree.addTreeSelectionListener(new Selector());
+						tree.getSelectionModel().setSelectionMode(TreeSelectionModel.DISCONTIGUOUS_TREE_SELECTION);
+						
+					
+						tree.addTreeSelectionListener(new TreeSelectionListener() {
+							@SuppressWarnings("null")
+							public void valueChanged(TreeSelectionEvent e) {
+								DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+							
+								if (node == null)
+									return;
+									
+								    
+									Object paramNew = e.getNewLeadSelectionPath().getLastPathComponent();
+									
+									newParam.setText("{"+paramNew.toString()+"}");						
+									
+										parameters.addElement(newParam.getText());
+										
+							}
+						}
+								
+								);
+						
+						JScrollPane treeView = new JScrollPane(tree);
+						panel.add(treeView);
+						panel.add(lowLabel);
+						panel.add(lowBBox);
+						panel.add(upLabel);
+						panel.add(upBBox);
+						panel.add(stLabel);
+						panel.add(stBox);
+						
+						Object[] paroptions= {"OK","Cancel"};
+						
+						int parameterSelection = JOptionPane.showOptionDialog(null, panel, "Select Parameter",JOptionPane.PLAIN_MESSAGE, 1, null, paroptions, paroptions[0]);
+						if (parameterSelection == JOptionPane.OK_OPTION) {
+							newLow.setText(lowBBox.getText());
+							newUp.setText(upBBox.getText());
+							newSt.setText(stBox.getText());
+							lowerBounds.addElement(lowBBox.getText());
+							upperBounds.addElement(upBBox.getText());
+							startVals.addElement(stBox.getText());
+						}
+					}
+					
+				});
+				
+				
+
+			//	}
+			}
+			
+			
+		}
+				
+				
+				);
 		
+		count = 0;
 		JRadioButton bmin = new JRadioButton("minimize");
 		JRadioButton bmax = new JRadioButton("maximize");
 		
@@ -235,55 +384,6 @@ public class Optimize extends AbstractCyAction {
 		
 		
 		
-		btnParam.addActionListener((ActionListener) new ActionListener() {
-			@SuppressWarnings("deprecation")
-			@Override
-			public void actionPerformed (ActionEvent evt) {
-				JPanel panel = new JPanel();
-				DefaultMutableTreeNode reactions = new DefaultMutableTreeNode("Reactions");
-				DefaultMutableTreeNode species = new DefaultMutableTreeNode("Species");
-				DefaultMutableTreeNode optim = new DefaultMutableTreeNode("Parameter Items");
-				String[] reactCat = {"Fluxes (amount)", "Fluxes (particle numbers)", "Reaction Parameters"};
-				String[] specCat = {"Inital Concentrations", "Rates", "Transient Concentrations"};
-				String [] optCat =  {"Reactions", "Species"};
-				//createNodes(reactions, reactCat);
-				//createNodes(species, specCat);
-				try {
-					createNodes(optim, optCat);
-				} catch (Exception e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				tree = new JTree(optim);
-				//tree.addTreeSelectionListener(new Selector());
-				tree.getSelectionModel().setSelectionMode(TreeSelectionModel.DISCONTIGUOUS_TREE_SELECTION);
-				
-				
-				tree.addTreeSelectionListener(new TreeSelectionListener() {
-					@SuppressWarnings("null")
-					public void valueChanged(TreeSelectionEvent e) {
-						DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
-					
-						if (node == null)
-							return;
-									
-							Object paramNew = e.getNewLeadSelectionPath().getLastPathComponent();
-							
-							param.setText("{"+paramNew.toString()+"}");						
-							
-					}
-				}
-						
-						);
-				
-				JScrollPane treeView = new JScrollPane(tree);
-				panel.add(treeView);
-		
-				JOptionPane.showMessageDialog(null, panel, "Select Parameter", JOptionPane.QUESTION_MESSAGE);
-				
-				
-			}
-		});
 		
 		DecimalFormat lowerFormatter = new DecimalFormat("0.000");
 		lowerFormatter.setDecimalSeparatorAlwaysShown(true);
@@ -369,28 +469,28 @@ public class Optimize extends AbstractCyAction {
 		}}
 				);
 		
-		JPanel myPanel = new JPanel();
+		
 		myPanel.add(fieldLabel);
 		myPanel.add(field);
 		myPanel.add(minmaxBox);
 		myPanel.add(subTaskLabel);
 		myPanel.add(subTaskList);
+		myPanel.add(paramAdd);
+		//myPanel.add(paramLabel);
+		//myPanel.add(param);
 		
-		myPanel.add(paramLabel);
-		myPanel.add(param);
-		
-		myPanel.add(paramBox);
+		//myPanel.add(paramBox);
 		myPanel.add(methodBox);
 		
 		
 		myPanel.add(btnOpen);
-		myPanel.add(btnParam);
 		
 		
-		Object [] options = {"OK", "Cancel", btnOpen, btnParam};
+		
+		Object [] options = {"OK", "Cancel", btnOpen};
 		
 		
-		int result = JOptionPane.showOptionDialog(null, myPanel, 
+		int result = JOptionPane.showOptionDialog(frame, myPanel, 
 	               "Copasi Optimization Task", JOptionPane.PLAIN_MESSAGE, 1, null, options, options[2]);
 	    
 		
@@ -398,19 +498,27 @@ public class Optimize extends AbstractCyAction {
 			
 			
 			xpression = field2.getText();
-			if (bmax.isSelected()) {
+			if (bmin.isSelected()) {
 				minmax = "Minimize";
-			} else if (bmin.isSelected()) {
+			} else if (bmax.isSelected()) {
 				minmax = "Maximize";
 			}
+			
 			mySubTask = subTaskList.getSelectedItem().toString();
-			parameter = param.getText();
-			lowB = lowerBound.getText();
+			//parameter = param.getText();
+		    parameter = new String[count];
+		    lowB = new String[count];
+		    upB = new String[count];
+		    startV = new String[count];
+			for (int a=0; a<count ; a++) {
+				parameter[a] = parameters.get(a);
+				lowB[a] = lowerBounds.get(a);
+				upB[a] = upperBounds.get(a);
+				startV[a] = startVals.get(a);
+				//startValue[a] = Double.parseDouble(startV[a]);
+			}
 			
-			upB = upperBound.getText();
 			
-			startV = startBound.getText();
-			double startVal = Double.parseDouble(startV);
 			
 			optData = setOptData();
 		}
@@ -421,7 +529,7 @@ public class Optimize extends AbstractCyAction {
 	
 	
 	
-	private void createNodes(DefaultMutableTreeNode item, String[] categoryNames) throws Exception {
+	public void createNodes(DefaultMutableTreeNode item, String[] categoryNames) throws Exception {
 		DefaultMutableTreeNode optItem = null;
 		
 		DefaultMutableTreeNode category = null;
@@ -505,7 +613,10 @@ public class Optimize extends AbstractCyAction {
 	public Object[] setOptData() {
 		
 		
-		Object [] optData = {xpression, minmax, mySubTask, parameter, lowB, upB, startVal};
+		Object [] optData = {xpression, minmax, mySubTask, parameter, lowB, upB, startV};
+		ParsingReportGenerator.getInstance().appendLine("LowB: " + lowB[1]);
+
+		ParsingReportGenerator.getInstance().appendLine("Start Value: " + startV[1]);
 		return optData;
 	}
 	
@@ -538,9 +649,6 @@ public class Optimize extends AbstractCyAction {
 			taskMonitor.setStatusMessage("Optimization started");
 			
 			taskMonitor.setProgress(0);
-			
-			
-			
 			
 			String modelName = new Scanner(CyActivator.getReportFile(1)).next();
 			String modelString = new Scanner(new File(modelName)).useDelimiter("\\Z").next();
@@ -576,7 +684,7 @@ public class Optimize extends AbstractCyAction {
 		     
 		     CModelValue variableModelValue = model.createModelValue("V");
 		     CModelValue fixedModelValue = model.createModelValue("F");
-			 CCopasiParameter paramet = parameterConverter(optData[3].toString());
+			 
 			 fixedModelValue.setStatus(CModelEntity.Status_FIXED);
 			 
 		     variableModelValue.setStatus(CModelEntity.Status_REACTIONS);
@@ -586,15 +694,26 @@ public class Optimize extends AbstractCyAction {
 		     model.compileIfNecessary();
 		     ObjectStdVector changedObjects = new ObjectStdVector();
 		     changedObjects.add(variableModelValue.getInitialValueReference());
-			 ParsingReportGenerator.getInstance().appendLine("Objective Function: " + optData[0]);
-			 ParsingReportGenerator.getInstance().appendLine("Parameter: " + paramet.getValueReference().getCN().getString());
-			 String objFun = optData[0].toString();
+		     String objFun = optData[0].toString();
 			 optProblem.setObjectiveFunction(objFun);
+			 ParsingReportGenerator.getInstance().appendLine("Objective Function: " + optData[0]);
+			 String[] finalParameters = (String[]) optData[3];
+			 String[] finalLowB = (String[]) optData[4];
+			 String[] finalUpB = (String[]) optData[5];
+			 String[] finalStV = (String[]) optData[6];
+			 
+			 for (int x=0; x<finalParameters.length; x++) {
+		     ParsingReportGenerator.getInstance().appendLine("Parameters: " + finalParameters[x]);
+			 CCopasiParameter paramet = parameterConverter(finalParameters[x]);
+			 ParsingReportGenerator.getInstance().appendLine("Parameter: " + paramet.getValueReference().getCN().getString());
 			 COptItem optItem = optProblem.addOptItem(paramet.getValueReference().getCN());
-			 double initialVal = (double) optData[6];
+			 optItem.setLowerBound(new CCommonName(finalLowB[x]));
+		     optItem.setUpperBound(new CCommonName(finalUpB[x]));
+			 double initialVal = Double.parseDouble(finalStV[x]);
 			 optItem.setStartValue(initialVal);
-			 optItem.setLowerBound(new CCommonName(optData[4].toString()));
-		     optItem.setUpperBound(new CCommonName(optData[5].toString()));
+			 
+		     
+			 }
 		     COptMethod optMethod=(COptMethod)optTask.getMethod();
 		     CCopasiParameter parameter=optMethod.getParameter("Number of Iterations");
 		     parameter.setIntValue(10000);
@@ -609,6 +728,48 @@ public class Optimize extends AbstractCyAction {
 		     {
 		       System.err.println("ERROR: "+e.getMessage());
 		     }
+		     
+		     String[] column = new String[5];
+		     column[0] = "Objective Value";
+		     column[1] = "CPU time";
+		     column[2] = "Function Evaluations";
+		     column[3] = "Failed Evaluations Exc";
+		     column[4] = "Failed Evaluations NaN";
+		     
+		     
+		     Object[][] optResults = new Object[1][5];
+		     optResults[0][0] = optProblem.getSolutionValue();
+		     optResults[0][1] = optProblem.getExecutionTime();
+		     optResults[0][2] = optProblem.getFunctionEvaluations();
+		     optResults[0][3] = optProblem.getFailedEvaluationsExc();
+		     optResults[0][4] = optProblem.getFailedEvaluationsNaN();
+		     
+		     
+		     GetTable table = new GetTable();
+		     table.getTable("Optimization Results", optResults, column);
+		     
+		     
+		     String[] column2 = new String[6];
+		     Object[][] paramResults = new Object[finalParameters.length][6];
+		     column2[0] = "Parameter";
+		     column2[1] = "Lower Bound";
+		     column2[2] = "Upper Bound";
+		     column2[3] = "Initial Value";
+		     column2[4] = "Parameter Value";
+		     column2[5] = "Gradient";
+		     for (int y=0; y<finalParameters.length;y++) {
+		    	 paramResults[y][0] = finalParameters[y].toString();
+		    	 paramResults[y][1] = finalLowB[y].toString();
+		    	 paramResults[y][2] = finalUpB[y].toString();
+		    	 paramResults[y][3] = finalStV[y].toString();
+			     paramResults[y][4] = optProblem.getSolutionVariables().get(y);
+			     paramResults[y][5] = optProblem.getVariableGradients().get(y);
+		     }
+		     
+		     GetTable table2 = new GetTable();
+		     table2.getTable("Parameters", paramResults, column2);
+		     
+		     
 		     double bestValue=optProblem.getSolutionValue();
 		     double solution=optProblem.getSolutionVariables().get(0);
 			 ParsingReportGenerator.getInstance().appendLine("Best Value: " + bestValue);

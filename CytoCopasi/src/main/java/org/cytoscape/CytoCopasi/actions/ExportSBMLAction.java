@@ -80,7 +80,7 @@ public class ExportSBMLAction extends AbstractCyAction{
 			this.fileUtil = fileUtil;
 			
 			this.inMenuBar = true;
-			suffix = ".sbml";
+			suffix = ".xml";
 		}
 		
 		CopasiSaveDialog getSaveDialog() {
@@ -120,7 +120,7 @@ public class ExportSBMLAction extends AbstractCyAction{
 	    }
 		
 		private File getSelectedFileFromSaveDialog() {
-			saveDialog = new CopasiSaveDialog(".sbml");
+			saveDialog = new CopasiSaveDialog(".xml");
 			
 			 int response = saveDialog.showSaveDialog(CyActivator.cytoscapeDesktopService.getJFrame());
 			 

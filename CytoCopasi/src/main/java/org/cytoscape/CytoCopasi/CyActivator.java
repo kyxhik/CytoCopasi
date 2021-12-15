@@ -8,12 +8,18 @@ import org.cytoscape.application.swing.CySwingApplication;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.io.util.StreamUtil;
 import org.cytoscape.model.CyNetworkFactory;
+import org.cytoscape.model.CyNetworkManager;
+import org.cytoscape.property.CyProperty;
 import org.cytoscape.service.util.AbstractCyActivator;
 import org.cytoscape.session.CySessionManager;
 import org.cytoscape.task.read.LoadNetworkFileTaskFactory;
+import org.cytoscape.task.read.LoadVizmapFileTaskFactory;
 import org.cytoscape.util.swing.FileUtil;
 import org.cytoscape.view.layout.CyLayoutAlgorithmManager;
 import org.cytoscape.view.model.CyNetworkViewFactory;
+import org.cytoscape.view.vizmap.VisualMappingManager;
+import org.cytoscape.view.vizmap.VisualStyle;
+import org.cytoscape.view.vizmap.VisualStyleFactory;
 import org.cytoscape.work.ServiceProperties;
 import org.cytoscape.work.SynchronousTaskManager;
 import org.cytoscape.work.TaskFactory;
@@ -34,6 +40,7 @@ import org.cytoscape.CytoCopasi.actions.ImportAction;
 import org.cytoscape.CytoCopasi.actions.SaveAsCpsAction;
 import org.cytoscape.CytoCopasi.actions.SteadyStateTask;
 import org.cytoscape.CytoCopasi.actions.Optimize;
+import org.cytoscape.CytoCopasi.actions.ParameterScan;
 import org.cytoscape.CytoCopasi.actions.TimeCourseSimulationTask;
 import org.cytoscape.CytoCopasi.tasks.CopasiReaderTaskFactory;
 
@@ -47,19 +54,16 @@ public class CyActivator extends AbstractCyActivator {
 	public static CySwingApplication cytoscapeDesktopService;
     public static DialogTaskManager taskManager;
     public static CySessionManager cySessionManager;
-    //public static CyNetworkFactory networkFactory;
-    //public static CyNetworkViewFactory networkViewFactory;
-    //public static CyNetworkManager networkManager;
-    //public static CyNetworkViewManager networkViewManager;
-    //public static VisualMappingManager visualMappingManager;
-    //public static VisualMappingFunctionFactory vmfFactoryC;
-    //public static VisualMappingFunctionFactory vmfFactoryD;
-    //public static VisualMappingFunctionFactory vmfFactoryP;
-    //public static VisualStyleFactory visualStyleFactory;
-    //public static CyTableFactory tableFactory;
+    public static LoadVizmapFileTaskFactory loadVizmapFileTaskFactory;
     public static CyApplicationConfiguration cyAppConfig;
     public static ImportAction importAction;
     public static CopasiReaderTaskFactory copasiReaderTaskFactory;
+    public static VisualStyle visualStyle;
+    public static VisualStyleFactory visualStyleFactory;
+    public static VisualMappingManager visualMappingManager;
+    public static CyNetworkManager netMgr;
+    public static MyCopasiPanel myCopasiPanel;
+    
    
     //public static CyEventHelper cyEventHelper;
     public static CyApplicationManager cyApplicationManager;
@@ -86,6 +90,11 @@ public class CyActivator extends AbstractCyActivator {
         taskManager = getService(context, DialogTaskManager.class);
         cySessionManager = getService(context, CySessionManager.class);
 		CyNetworkFactory networkFactory = getService(context, CyNetworkFactory.class);
+		netMgr = getService(context,CyNetworkManager.class);
+		loadVizmapFileTaskFactory = getService(context, LoadVizmapFileTaskFactory.class);
+		
+		visualMappingManager = getService(context, VisualMappingManager.class);
+		visualStyleFactory = getService(context, VisualStyleFactory.class);
         CySwingApplication cySwingApplication = getService(context, CySwingApplication.class);
         CyNetworkViewFactory cyNetworkViewFactory = getService(context, CyNetworkViewFactory.class);
         CyLayoutAlgorithmManager cyLayoutAlgorithmManager = getService(context, CyLayoutAlgorithmManager.class);
@@ -96,13 +105,6 @@ public class CyActivator extends AbstractCyActivator {
         LoadNetworkFileTaskFactory loadNetworkFileTaskFactory = getService(context, LoadNetworkFileTaskFactory.class);
         @SuppressWarnings("rawtypes")
         SynchronousTaskManager synchronousTaskManager = getService(context, SynchronousTaskManager.class);
-
-    	
-    	
-    
-
-    	 
-    	
     	
     	
         Properties properties = new Properties();
@@ -118,16 +120,20 @@ public class CyActivator extends AbstractCyActivator {
       //  PlotDataFactory plotDataFactory = new PlotDataFactory();
         SteadyStateTask steadyStateTask = new SteadyStateTask(cySwingApplication, fileUtil);
         Optimize optimize = new Optimize(cySwingApplication, fileUtil);
+        ParameterScan parameterScan = new ParameterScan(cySwingApplication, fileUtil);
         registerService(context, saveAsCpsAction,CyAction.class, properties);
         registerService(context,exportSBMLAction, CyAction.class, properties);
         registerService(context,timeCourseSimulationTask,CyAction.class,properties);
         registerService(context,steadyStateTask, CyAction.class, properties);
         registerService(context,optimize, CyAction.class, properties);
+        registerService(context,parameterScan, CyAction.class,properties);
+        
        // registerService(context, plotDataFactory, TaskFactory.class, properties);
         
         
         CopasiFileFilter copasiFilter = new CopasiFileFilter(streamUtil);
         copasiReaderTaskFactory = new CopasiReaderTaskFactory(copasiFilter, networkFactory, cyNetworkViewFactory, cyLayoutAlgorithmManager);
+       
         Properties copasiReaderProps = new Properties();
         copasiReaderProps.setProperty("readerDescription", "COPASI file reader (copasi)");
         registerAllServices(context, copasiReaderTaskFactory, copasiReaderProps);
@@ -135,7 +141,11 @@ public class CyActivator extends AbstractCyActivator {
         registerService(context, taskManager, DialogTaskManager.class, new Properties());
         registerService(context, cySessionManager, CySessionManager.class, new Properties());
         registerService(context, cyAppConfig, CyApplicationConfiguration.class, new Properties());
-    }
+        registerService(context, loadVizmapFileTaskFactory, LoadVizmapFileTaskFactory.class, new Properties());
+        registerService(context, visualStyleFactory, VisualStyleFactory.class, new Properties());
+        registerService(context, visualMappingManager, VisualMappingManager.class, new Properties());
+        registerService(context,netMgr,CyNetworkManager.class, new Properties());
+	}
 	
 	
 	

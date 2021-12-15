@@ -11,27 +11,45 @@ import java.nio.charset.Charset;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.cytoscape.CytoCopasi.CyActivator;
 import org.cytoscape.CytoCopasi.Report.ImportReportGenerator;
 import org.cytoscape.CytoCopasi.Report.ParsingReportGenerator;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
+import org.cytoscape.model.CyNetwork;
 import org.cytoscape.task.read.LoadNetworkFileTaskFactory;
 import org.cytoscape.util.swing.FileChooserFilter;
 import org.cytoscape.util.swing.FileUtil;
+import org.cytoscape.view.layout.CyLayoutAlgorithm;
+import org.cytoscape.view.layout.CyLayoutAlgorithmManager;
+import org.cytoscape.view.model.CyNetworkView;
+import org.cytoscape.view.model.CyNetworkViewFactory;
+import org.cytoscape.view.vizmap.VisualStyle;
 import org.cytoscape.work.SynchronousTaskManager;
+import org.cytoscape.work.Task;
 import org.cytoscape.work.TaskIterator;
+import org.cytoscape.work.TaskMonitor;
 
 public class ImportAction extends AbstractCyAction{
 	private static final long serialVersionUID = 1L;
-	
+	VisualStyle visStyle;
+    String styleName;
+    private File visFile = null;
+    private File visFile2 = null;
+    private String styleFileCopasi = "/home/people/hkaya/CytoscapeConfiguration/app-data/CytoCopasi/logs/cy3Copasi.xml";
+    private String styleFileSbml = "/home/people/hkaya/CytoscapeConfiguration/app-data/CytoCopasi/logs/cy3sbml.xml";
+   
+
 	CySwingApplication cySwingApplication;
     FileUtil fileUtil;
     
     LoadNetworkFileTaskFactory loadNetworkFileTaskFactory;
     @SuppressWarnings("rawtypes")
     SynchronousTaskManager synchronousTaskManager;
+    
+    
     
     
     
@@ -45,6 +63,7 @@ public class ImportAction extends AbstractCyAction{
 		this.fileUtil = fileUtil;
 		this.loadNetworkFileTaskFactory = loadNetworkFileTaskFactory;
 		this.synchronousTaskManager = synchronousTaskManager;
+		
 		
 
 		this.inToolBar = false;
@@ -80,16 +99,36 @@ public class ImportAction extends AbstractCyAction{
     				myFile.delete();
     				File newFile = new File(CyActivator.getReportFile(1).getAbsolutePath());
     				String myPath = files[i].getAbsolutePath();
+    				if (visStyle != null) {
+    				CyActivator.visualMappingManager.removeVisualStyle(visStyle);
+    				}
+    				if (myPath.contains(".cps")) {
+    			
     				
-    				
+    				visFile = new File(styleFileCopasi);
+    		    	Set<VisualStyle> vsSet = CyActivator.loadVizmapFileTaskFactory.loadStyles(visFile);
+    		        
+    		        visStyle = vsSet.iterator().next();
+    		        
+    		        visStyle.setTitle("cy3Copasi");
+    		        CyActivator.visualMappingManager.addVisualStyle(visStyle);
+    		        CyActivator.visualMappingManager.setCurrentVisualStyle(visStyle);
+    				} else if (myPath.contains(".xml")) {
+    					visFile = new File(styleFileSbml);
+    			    	Set<VisualStyle> vsSet = CyActivator.loadVizmapFileTaskFactory.loadStyles(visFile);
+    			        
+    			        visStyle = vsSet.iterator().next();
+    			        
+    			        visStyle.setTitle("cy3sbml");
+    			        CyActivator.visualMappingManager.addVisualStyle(visStyle);
+    			        CyActivator.visualMappingManager.setCurrentVisualStyle(visStyle);
+    			        
+    				}
     				try {
     					FileWriter f2 = new FileWriter(newFile, false);
     					f2.write(myPath);
     					f2.close();
-    				
-    				
-    				
-    					
+	
     				} catch (Exception e1) {
     					// TODO Auto-generated catch block
     					e1.printStackTrace();

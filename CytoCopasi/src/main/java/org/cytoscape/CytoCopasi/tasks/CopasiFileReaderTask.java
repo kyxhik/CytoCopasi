@@ -17,10 +17,15 @@ import org.cytoscape.model.CyNetworkFactory;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.model.subnetwork.CyRootNetwork;
 import org.cytoscape.model.subnetwork.CySubNetwork;
+import org.cytoscape.property.CyProperty;
+import org.cytoscape.service.util.internal.utils.ServiceUtil;
 import org.cytoscape.view.layout.CyLayoutAlgorithm;
 import org.cytoscape.view.layout.CyLayoutAlgorithmManager;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.CyNetworkViewFactory;
+import org.cytoscape.view.vizmap.VisualMappingManager;
+import org.cytoscape.view.vizmap.VisualStyle;
+import org.cytoscape.view.vizmap.VisualStyleFactory;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.Task;
 import org.cytoscape.work.TaskIterator;
@@ -29,7 +34,9 @@ import org.cytoscape.work.TaskMonitor;
 import org.COPASI.*;
 import org.cytoscape.CytoCopasi.AttributeUtil;
 import org.cytoscape.CytoCopasi.CyActivator;
+import org.cytoscape.CytoCopasi.MyCopasiPanel;
 import org.cytoscape.CytoCopasi.Report.ParsingReportGenerator;
+
 
 
 public class CopasiFileReaderTask extends AbstractTask implements CyNetworkReader {
@@ -39,12 +46,25 @@ public class CopasiFileReaderTask extends AbstractTask implements CyNetworkReade
     private final CyNetworkFactory networkFactory;
     private final CyNetworkViewFactory viewFactory;
     private final CyLayoutAlgorithmManager cyLayoutAlgorithmManager;
+    
+    VisualStyle visStyle;
+    String styleName;
+   
+    
+    //private final VisualMappingManager vmm;
+    private VisualStyle visualStyle;
+    //private final VisualStyleFactory visualStyleFactory;
 
     private LinkedList<CyNetwork> cyNetworks;
+    
     private TaskMonitor taskMonitor;
-   
+    private File visFile = null;
+    private File visFile2 = null;
+    private String styleFileCopasi = "/home/people/hkaya/CytoscapeConfiguration/app-data/CytoCopasi/logs/cy3Copasi.xml";
+    private String styleFileSbml = "/home/people/hkaya/CytoscapeConfiguration/app-data/CytoCopasi/logs/cy3sbml.xml";
     private Map<String, CyNode> id2Node;      // node dictionary
     private Boolean error = false;
+    CyNode n;
 
 
     /**
@@ -60,7 +80,9 @@ public class CopasiFileReaderTask extends AbstractTask implements CyNetworkReade
         this.networkFactory = networkFactory;
         this.viewFactory = viewFactory;
         this.cyLayoutAlgorithmManager = cyLayoutAlgorithmManager;
-
+        
+        //this.visualMappingManager = visualMappingManager;
+       // this.visualStyleFactory = visualStyleFactory;
         // networks returned by the reader
         cyNetworks = new LinkedList<>();
         
@@ -79,14 +101,27 @@ public class CopasiFileReaderTask extends AbstractTask implements CyNetworkReade
         return cyNetworks.toArray(new CyNetwork[cyNetworks.size()]);
     }
     
+    
+
+   
     @Override
     public CyNetworkView buildCyNetworkView(final CyNetwork network) {
         // Create view
+    	  String modelName;
+	
         CyNetworkView view = viewFactory.createNetworkView(network);
 
+	    styleName = "cy3Sbml";
+			
+       
+       
+      
+        
+     //   CyActivator.netMgr.destroyNetwork(network);
+      
         // layout
         if (cyLayoutAlgorithmManager != null) {
-            CyLayoutAlgorithm layout = cyLayoutAlgorithmManager.getLayout("force-directed");
+            CyLayoutAlgorithm layout = cyLayoutAlgorithmManager.getLayout("hierarchical");
             if (layout == null) {
                 layout = cyLayoutAlgorithmManager.getLayout(CyLayoutAlgorithmManager.DEFAULT_LAYOUT_NAME);
             }
@@ -107,6 +142,9 @@ public class CopasiFileReaderTask extends AbstractTask implements CyNetworkReade
     public Boolean getError() {
         return error;
     }
+    
+   
+    
     
     
     @Override
@@ -148,15 +186,21 @@ private static final int BUFFER_SIZE = 16384;
            String xml = inputStream2String(stream);
            id2Node = new HashMap<>();
            
+           String modelName = new Scanner(CyActivator.getReportFile(1)).next();
            
            CDataModel dm  = CRootContainer.addDatamodel();
+           if (modelName.endsWith(".cps")) {
            dm.loadFromString(xml);
+           } else if (modelName.endsWith(".xml")) {
+           dm.importSBML(modelName);
+        }
            
            CyNetwork network = readModelInNetwork(dm.getModel());
            addAllNetworks(network);
            
            
            CRootContainer.removeDatamodel(dm);
+          
            
         }
         catch (Exception e) {
@@ -238,14 +282,7 @@ private static final int BUFFER_SIZE = 16384;
 
         setAttributes(network, network, model);
 
-        // Compartment //
-        for(int i = 0; i < model.getNumCompartments(); i++) {
-			CCompartment compartment = model.getCompartment(i);       		
-            CyNode n = createNode(network, compartment, "compartment");
-            AttributeUtil.set(network, n, "dimensions", (double)compartment.getDimensionality(), Double.class);
-            AttributeUtil.set(network, n, "size", (double)compartment.getInitialValue(), Double.class);
-                        
-        }
+        
         
      // Parameter //
         for(int i = 0; i < model.getNumModelValues(); i++) {
@@ -274,18 +311,15 @@ private static final int BUFFER_SIZE = 16384;
     
         for(int i = 0; i < model.getNumReactions(); i++) {
         	CReaction reaction = model.getReaction(i);
-            CyNode n = createNode(network, reaction, "reaction");
-
+        	
+        	if (reaction.isReversible()) {
+            n = createNode(network, reaction, "reaction rev");
             AttributeUtil.set(network, n, "reversible", reaction.isReversible(), Boolean.class);
-
-            // edge to compartment?
-            //CCompartment comp = reaction.getScalingCompartment();
-    		//
-            //if (comp != null) {
-            //    AttributeUtil.set(network, n, "compartment", comp.getObjectName(), String.class);
-            //    CyNode compNode = id2Node.get(comp.getCN().getString());
-            //    createEdge(network, n, compNode, "compartment");
-            //}
+        	} else if (!reaction.isReversible()) {
+        	n = createNode(network, reaction, "reaction irrev");
+        	AttributeUtil.set(network, n, "reversible", reaction.isReversible(), Boolean.class);
+        	}
+            
 
     		CChemEq eqn = reaction.getChemEq();
     		int numSubstrates = (int) eqn.getSubstrates().size();

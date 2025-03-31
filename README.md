@@ -1,2 +1,2 @@
-# CytoCopasiApp
+# CytoCopasi
  
